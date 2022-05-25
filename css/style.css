@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: #333;
+    font-size: 62.5%;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* when some page is loading */
+#page-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+}
+#page-loading p, i{
+    font-size: 2rem;
+}
+#page-loading i {
+    animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* #page-heading */
+#page-heading {
+    background-color: #151515;
+    box-shadow: 1px 4px 5px 2px rgb(0 0 0 / 11%);
+}
+#page-heading .navbar-brand img {
+    margin: 46px 0;
+}
+/* .input-search {
+    background-color: white;
+    height: 40px;
+    border-radius: 20px;
+}
+.input-search input {
+    border: none;
+    caret-color: #444;
+    flex: 1 1;
+    height: 100%;
+    outline: none;
+    padding: 0 4px;
+    font-size: 1.8rem;
+    border-radius: 50%;
+}
+.IS-icon img {
+    margin: 8px;
+}
+.IS-close{
+    font-size: 1.9rem;
+    position: relative;
+    top: -2px;
+    right: 10px;
+    display: none;
+} */
+#page-heading li a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+#page-heading li a:hover, #page-heading li a.active {
+    background-color: #d81a24;
+}
