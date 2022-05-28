@@ -138,3 +138,23 @@ html {
 .PH-dot-items span.active, .PH-dot-items span:hover { 
     background-color: #fff;
 }
+
+/* watch movies */
+.watch-movies {
+    padding: 50px 0;
+}
+.watch-movies h1 {
+    font-family: "Roboto Slab", serif;
+    text-transform: uppercase;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 0.18rem;
+    color: black;
+    text-align: center;
+}
+.watch-movies hr {
+    margin: 30px auto 45px ;
+    width: 100px;  
+    color: #b7b7b7;
+    height: 2px;
+}
