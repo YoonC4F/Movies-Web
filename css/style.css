@@ -77,3 +77,64 @@ html {
 #page-heading li a:hover, #page-heading li a.active {
     background-color: #d81a24;
 }
+.slider-containers {
+    width: 100%;
+    overflow: hidden;
+}
+/* .slider-container {
+    display: flex;
+} */
+.slider-containers .slider-container{
+    display: flex;
+    width: 300%;
+    gap: 42px;
+}
+.slider-containers .slider {
+    width: 50%;
+}
+.PH-slider img {
+    max-width: 100%;
+    height: auto;
+    opacity: .6;
+    transition: .3s;
+}
+.PH-slider img:hover {
+    opacity: 1;
+}
+.PH-slider h6 a {
+    display: block;
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: .4s ease-in-out;
+    font-weight: 700;
+    margin-top: 25px;
+}
+.PH-slider h6 a:hover {
+    color: #d81a24;
+}
+.PH-slider p{
+    margin: 10px 0 8px 0;
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+.PH-dot-items {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.PH-dot-items span {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+.PH-dot-items span + span {
+    margin-left: 20px;
+}
+.PH-dot-items span.active, .PH-dot-items span:hover { 
+    background-color: #fff;
+}
