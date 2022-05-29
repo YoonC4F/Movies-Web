@@ -181,6 +181,9 @@ html {
     border-radius: 6px;
     border: 2px solid #d81a24;
 }
+/* #page-content .col-12 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
 
 /* watch movies */
 .watch-movies {
@@ -272,6 +275,9 @@ html {
     font-size: 1.6rem;
     color: #b7b7b7;
     margin: 10px 0 16px;
+}
+.description-star {
+    padding-bottom: 10px;
 }
 .description-star i{
     font-size: 1.6rem;
@@ -420,4 +426,35 @@ html {
     background-color: #d81a24;
 }
 
-/*  */
+/* box-office */
+.box-office {
+    padding: 90px 0 75px;
+}
+.box-office hr {
+    border-bottom: 2px solid #b7b7b7;
+}
+.box-office .row {
+    padding-top:16px;
+}
+.box-office .movie-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-office .movie-price p{
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+.box-office .movie-price a {
+    text-decoration: none;
+    color: #d81a24;
+    font-size: 18px;
+    transition: 0.4s;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+.box-office .movie-price a:hover {
+    color: #000;
+}
