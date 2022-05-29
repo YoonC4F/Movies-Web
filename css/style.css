@@ -591,3 +591,22 @@ a.new-cmt-icon:hover span {
 .recent-news .col-12 {
     margin-bottom: 45px;
 }
+
+/* our-partners */
+.our-partners {
+    padding: 90px 0;
+    background-color: #f8f9fa;
+}
+.our-partners hr {
+    border-bottom: 2px solid #b7b7b7;
+}
+.our-partners .col-md-3 {
+    text-align: center;
+}
+.our-partners .col-md-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 150px;
+    max-height: 150px;
+}
