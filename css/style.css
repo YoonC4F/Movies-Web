@@ -610,3 +610,59 @@ a.new-cmt-icon:hover span {
     max-width: 150px;
     max-height: 150px;
 }
+
+/* testimonials */
+.testimonials {
+    padding: 90px 0;
+}
+.testimonials hr {
+    border-bottom: 2px solid #b7b7b7;
+}
+.T-review-show {
+    width: 100%;
+    overflow: hidden;
+    /* position: relative; */
+}
+.T-review-container {
+    transition: all 0.25s ease 0s;
+    width: 3600px;
+}
+.T-reviewer{
+    width: 570px;
+    margin-right: 30px;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0 30px 30px;
+}
+.T-reviewer img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.T-reviewer p:nth-of-type(1) {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #d81a24;
+    margin-top: 5px;
+}
+.T-reviewer p:nth-of-type(2) {
+    line-height: 24px;
+    margin-top: 20px;
+}
+.T-dot-items {
+    margin-top: 17px;
+    gap: 20px;
+}
+.T-dot-items span {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #b2b2b2;
+    transition: 0.3s ease;
+}
+.T-dot-items span.active, .T-dot-items span:hover {
+    background-color: #b2b2b2;
+}
