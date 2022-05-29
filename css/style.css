@@ -19,16 +19,21 @@ html {
     text-align: center;
     display: none;
 }
-#page-loading p, i{
+
+#page-loading p,
+i {
     font-size: 2rem;
 }
+
 #page-loading i {
     animation: rotate 1s linear infinite;
 }
+
 @keyframes rotate {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -39,9 +44,11 @@ html {
     background-color: #151515;
     box-shadow: 1px 4px 5px 2px rgb(0 0 0 / 11%);
 }
+
 #page-heading .navbar-brand img {
     margin: 46px 0;
 }
+
 /* .input-search {
     background-color: white;
     height: 40px;
@@ -67,40 +74,48 @@ html {
     right: 10px;
     display: none;
 } */
-#page-heading li a{
+#page-heading li a {
     font-size: 1.5rem;
     font-weight: 600;
     padding: 6px 10px;
     border-radius: 10px;
     margin: 0 10px;
 }
-#page-heading li a:hover, #page-heading li a.active {
+
+#page-heading li a:hover,
+#page-heading li a.active {
     background-color: #d81a24;
 }
+
 .slider-containers {
     width: 100%;
     overflow: hidden;
 }
+
 /* .slider-container {
     display: flex;
 } */
-.slider-containers .slider-container{
+.slider-containers .slider-container {
     display: flex;
     width: 300%;
     gap: 42px;
 }
+
 .slider-containers .slider {
     width: 50%;
 }
+
 .PH-slider img {
     max-width: 100%;
     height: auto;
     opacity: .6;
     transition: .3s;
 }
+
 .PH-slider img:hover {
     opacity: 1;
 }
+
 .PH-slider h6 a {
     display: block;
     color: white;
@@ -110,20 +125,24 @@ html {
     font-weight: 700;
     margin-top: 25px;
 }
+
 .PH-slider h6 a:hover {
     color: #d81a24;
 }
-.PH-slider p{
+
+.PH-slider p {
     margin: 10px 0 8px 0;
     font-size: 1.6rem;
     color: rgba(255, 255, 255, 0.4);
 }
+
 .PH-dot-items {
     padding: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .PH-dot-items span {
     width: 13px;
     height: 13px;
@@ -132,10 +151,13 @@ html {
     cursor: pointer;
     transition: background-color 0.2s linear;
 }
-.PH-dot-items span + span {
+
+.PH-dot-items span+span {
     margin-left: 20px;
 }
-.PH-dot-items span.active, .PH-dot-items span:hover { 
+
+.PH-dot-items span.active,
+.PH-dot-items span:hover {
     background-color: #fff;
 }
 
@@ -143,18 +165,115 @@ html {
 .watch-movies {
     padding: 50px 0;
 }
+
 .watch-movies h1 {
-    font-family: "Roboto Slab", serif;
+    /* font-family: "Roboto Slab", serif; */
     text-transform: uppercase;
     font-size: 46px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.18rem;
     color: black;
     text-align: center;
 }
+
 .watch-movies hr {
-    margin: 30px auto 45px ;
-    width: 100px;  
+    margin: 30px auto 45px;
+    width: 100px;
     color: #b7b7b7;
-    height: 2px;
+    border-bottom: 2px solid #b7b7b7;
+    border-top: none;
+}
+
+.btn-controller {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn-controller .btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 6px;
+    color: #d81a24;
+    border: 2px solid #d81a24;
+    font-weight: 500;
+}
+
+.btn-controller .btn.active,
+.btn-controller .btn:hover {
+    background-color: #d81a24;
+    color: #fff;
+}
+
+.watch-movies .row {
+    padding-top: 20px;
+}
+.watch-movies .col-12 {
+    margin-top: 30px;
+}
+.movie-img-wrapper {
+    position: relative;
+}
+
+.movie-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-img-wrapper .play-interact {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.58);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.movie-img-wrapper .play-interact i {
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.movie-img-wrapper:hover .play-interact {
+    display: block;
+    opacity: 1;
+}
+.movie-img-wrapper:hover  i {
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.movie-description h6 a{
+    display: inline-block;
+    color: #151515;
+    text-decoration: none;
+    font-size: 1.8rem;
+    line-height: 1em;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+.movie-description h6 a:hover {
+    color: #d81a24;
+}
+.movie-description p {
+    font-size: 1.6rem;
+    color: #b7b7b7;
+    margin: 10px 0 16px;
+}
+.description-star i{
+    font-size: 1.6rem;
+    color: #b7b7b7;
+}
+.description-star i.voted {
+    color: #f9be30;
 }
