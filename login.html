@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="form-content">
+        <div class="form-background">
+            <img src="./images/login-img1.jpg" alt="bg">
+        </div>
+        <div class="logo-wrapper">
+            <a href="./login.html" class="fixed-logo">
+                <img src="./images/logo-default.png" alt="logo-img">
+            </a>
+        </div>
+        <div class="form-wrapper mx-auto">
+            <form>
+                <h1>Login</h1>
+                <div class="form-group">
+                    <div class="form-control-wrapper">
+                        <input type="text" name="username" class="form-control" id="username">
+                        <label for="username">Username</label>
+                    </div>
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <div class="form-control-wrapper">
+                        <input type="password" name="password" class="form-control" id="password">
+                        <label for="password">Password</label>
+                    </div>
+                    <span class="form-message"></span>
+                </div>
+                <button type="submit" class="form-submit">Login</button>
+                <div class="other-wrapper d-flex justify-content-between">
+                    <label class="keep-login" for="reminde-me">
+                        Remind me
+                        <input type="checkbox" name="reminde-me" id="reminde-me">
+                        <span class="checkmark"></span>
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+            <div class="link-to-rest">
+                Don't have an account?
+                <a href="#">Sign up</a>
+            </div>
+            <div class="captcha-wrapper none">
+                <p>Trang này được Google reCAPTCHA bảo vệ để đảm bảo bạn không phải là robot.
+                    <span>Tìm hiểu thêm.</span>
+                </p>
+                <p>Thông tin do Google reCAPTCHA thu thập sẽ tuân theo <span>Chính sách Quyền riêng tư</span> and <span>Điều khoản dịch vụ</span> của Google, và được dùng để cung cấp, duy trì và cải thiện dịch vụ reCAPTCHA cũng như các mục đích bảo mật nói chung (thông tin này không được dùng để cá nhân hóa quảng cáo của Google).</p>
+            </div>
+        </div>
+    </div>
+    <div id="page-footer">
+        <div class="container">
+            <div class="footer-content">
+                <img src="./images/logo-default.png" alt="logo-img">
+                <div class="icon-wrapper">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                    <a href="#"><i class="fab fa-google"></i></a>
+                    <a href="#"><i class="fas fa-rss"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2022 All Rights Reserved. Terms of Use.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

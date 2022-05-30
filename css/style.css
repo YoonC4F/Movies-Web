@@ -670,7 +670,7 @@ a.new-cmt-icon:hover span {
 /* page-footer */
 #page-footer {
     color: #fff;
-    background-color: #151515;
+    background: rgba(0,0,0);
     text-align: center;
 }
 .footer-content {
