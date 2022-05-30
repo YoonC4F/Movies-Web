@@ -44,7 +44,7 @@ html {
 
 #form-content .form-wrapper {
   width: 450px;
-  height: 700px;
+  min-height: 700px;
   background-color: rgba(0, 0, 0, 0.75);
   padding: 60px 68px 40px;
   margin-bottom: 90px;
@@ -98,6 +98,13 @@ html {
           transform: translateY(0);
 }
 
+#form-content .form-wrapper form .form-group .form-control-wrapper.has-text label {
+  font-size: 1.1rem;
+  top: 7px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 #form-content .form-wrapper form .form-group .form-message {
   font-size: 1.3rem;
   color: #e87c03;
@@ -123,29 +130,29 @@ html {
   padding-bottom: 56px;
 }
 
-#form-content .form-wrapper form .other-wrapper .keep-login {
+#form-content .form-wrapper form .other-wrapper label {
   display: block;
   position: relative;
   padding-left: 26px;
   color: #b3b3b3;
 }
 
-#form-content .form-wrapper form .other-wrapper .keep-login input {
+#form-content .form-wrapper form .other-wrapper label input {
   position: absolute;
   opacity: 0;
   height: 0;
   width: 0;
 }
 
-#form-content .form-wrapper form .other-wrapper .keep-login input:checked ~ .checkmark {
+#form-content .form-wrapper form .other-wrapper label input:checked ~ .checkmark {
   background-color: #2196F3;
 }
 
-#form-content .form-wrapper form .other-wrapper .keep-login input:checked ~ .checkmark:after {
+#form-content .form-wrapper form .other-wrapper label input:checked ~ .checkmark:after {
   display: block;
 }
 
-#form-content .form-wrapper form .other-wrapper .keep-login .checkmark {
+#form-content .form-wrapper form .other-wrapper label .checkmark {
   position: absolute;
   top: 5px;
   left: 0;
@@ -154,13 +161,13 @@ html {
   background-color: #eee;
 }
 
-#form-content .form-wrapper form .other-wrapper .keep-login .checkmark:after {
+#form-content .form-wrapper form .other-wrapper label .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-#form-content .form-wrapper form .other-wrapper .keep-login .checkmark:after {
+#form-content .form-wrapper form .other-wrapper label .checkmark:after {
   left: 6px;
   top: 2px;
   width: 5px;
@@ -171,7 +178,7 @@ html {
   transform: rotate(45deg);
 }
 
-#form-content .form-wrapper form .other-wrapper .keep-login:hover .checkmark {
+#form-content .form-wrapper form .other-wrapper .keep-login:hover input:not(:checked) ~ .checkmark {
   background-color: #ccc;
 }
 

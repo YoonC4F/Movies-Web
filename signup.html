@@ -5,47 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div id="form-content">
-        <a href="./login.html" class="fixed-logo">
-            <img src="./images/logo-default.png" alt="logo-img">
-        </a>
-        <div class="form-wrapper">
+        <div class="form-background">
+            <img src="./images/login-img1.jpg" alt="bg">
+        </div>
+        <div class="logo-wrapper">
+            <a href="./login.html" class="fixed-logo">
+                <img src="./images/logo-default.png" alt="logo-img">
+            </a>
+        </div>
+        <div class="form-wrapper mx-auto">
             <form>
                 <h1>Sign up</h1>
                 <div class="form-group">
-                    <input type="text" name="fullname" class="form-control" placeholder="Full Name">
+                    <div class="form-control-wrapper">
+                        <input type="text" name="fullname" class="form-control" id="fullname">
+                        <label for="username">Full Name</label>
+                    </div>
                     <span class="form-message"></span>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="Username">
+                    <div class="form-control-wrapper">
+                        <input type="text" name="username" class="form-control" id="username">
+                        <label for="username">Username</label>
+                    </div>
                     <span class="form-message"></span>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Password">
+                    <div class="form-control-wrapper">
+                        <input type="password" name="password" class="form-control" id="password">
+                        <label for="password">Password</label>
+                    </div>
                     <span class="form-message"></span>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm Password">
+                    <div class="form-control-wrapper">
+                        <input type="password" name="password_confirmation" class="form-control" id="password-confirmation">
+                        <label for="password_confirmation">Confirm Password</label>
+                    </div>
                     <span class="form-message"></span>
                 </div>
                 <button class="form-submit">Login</button>
-                <div class="other-wrapper">
-                    <div class="keep-login">
+                <div class="other-wrapper d-flex justify-content-between">
+                    <label class="keep-login" for="agree-policy">
+                        I agree with Terms of Service.
                         <input type="checkbox" name="agree-policy" id="agree-policy">
-                        <label for="agree-policy">I agree with Terms of Service.</label>
-                    </div>
+                        <span class="checkmark"></span>
+                    </label>
                     <a href="#">Help</a>
                 </div>
             </form>
-        </div>
-        <div class="link-to-rest">
-            Already a Member?
-            <a href="#">Go to sign in</a>
+            <div class="link-to-rest">
+                Already a Member?
+                <a href="./login.html">Go to login</a>
+            </div>
         </div>
     </div>
     <div id="page-footer">
