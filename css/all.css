@@ -53,26 +53,255 @@ html {
   }
 }
 
+@-webkit-keyframes fadeInForCard {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInForCard {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 #page-heading {
   background-color: #151515;
   -webkit-box-shadow: 1px 4px 5px 2px rgbs(0, 0, 0, 0.11);
           box-shadow: 1px 4px 5px 2px rgbs(0, 0, 0, 0.11);
 }
 
-#page-heading .navbar-brand img {
-  margin: 46px 0;
+#page-heading nav {
+  padding: 51px 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-#page-heading li a {
-  font-size: 1.5rem;
+#page-heading nav .nav-width {
+  width: 70%;
+}
+
+#page-heading nav li a {
+  font-size: 1.6rem;
   font-weight: 600;
-  padding: 6px 10px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  margin: 0 10px;
+  color: #fff;
+}
+
+#page-heading nav li a:hover, #page-heading nav li a.active {
+  background-color: #d81a24;
+}
+
+#page-heading nav .connecting-to-web {
+  display: none;
+}
+
+#page-heading nav .connected-to-web {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 0 10px;
   border-radius: 10px;
   margin: 0 10px;
+  color: #fff;
 }
 
-#page-heading li a:hover, #page-heading li a.active {
-  background-color: #d81a24;
+#page-heading nav .connected-to-web .shopping-card-wrapper {
+  cursor: pointer;
+  position: relative;
+  margin-right: 16px;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .shoping-card-title {
+  display: inline-block;
+  padding: 8px;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film {
+  display: none;
+  -webkit-animation: fadeInForCard 0.3s ease;
+          animation: fadeInForCard 0.3s ease;
+  cursor: default;
+  width: 400px;
+  position: absolute;
+  background-color: #212529;
+  z-index: 9999;
+  right: 0;
+  top: 46px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  overflow: hidden;
+  padding-left: 0;
+  padding-bottom: 12px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  will-change: opacity,transform;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 20px 16px;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-header h6 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-header a {
+  text-decoration: none;
+  border-radius: 4px;
+  color: #f05123;
+  font-size: 1.4rem;
+  margin-left: auto;
+  padding: 8px;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-header a:hover {
+  background-color: #171818;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content {
+  max-height: 68vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item {
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 8px;
+  padding: 8px 12px;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item a {
+  color: #fff;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item a img {
+  border-radius: 8px;
+  height: 67px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 120px;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item .card-film-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 12px;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item .card-film-info h3 {
+  font-size: 1.5rem;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item .card-film-info h3 a {
+  text-decoration: none;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item .card-film-info p {
+  color: #666;
+  font-size: 1.2rem;
+  margin: 4px 0 0;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item .card-film-info .card-checkpay span {
+  display: none;
+  margin-left: calc(100% - 56px);
+  font-size: 1.6rem;
+  position: relative;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item .card-film-info .card-checkpay span:after {
+  content: "";
+  position: absolute;
+  left: 39px;
+  top: 4px;
+  width: 7px;
+  height: 12px;
+  border: solid #c28787;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item .card-film-info .card-checkpay a {
+  margin-left: calc(100% - 98px);
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #f05123;
+  display: inline-block;
+  padding: 0 6px;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item .card-film-info .card-checkpay.paid span {
+  display: block;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item .card-film-info .card-checkpay.paid a {
+  display: none;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item:hover {
+  background-color: #443f3f;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper.onclick .demo-card-film {
+  display: block;
+}
+
+#page-heading nav .connected-to-web .notification-wrapper {
+  cursor: pointer;
+  position: relative;
+}
+
+#page-heading nav .connected-to-web .notification-wrapper span {
+  display: inline-block;
+  padding: 8px;
+}
+
+#page-heading nav .connected-to-web .shopping-card:hover, #page-heading nav .connected-to-web .notification-wrapper:hover {
+  opacity: 0.7;
+}
+
+#page-heading nav .connected-to-web .avatar-wrapper img {
+  cursor: pointer;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  margin: 6px 0 6px 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 28px;
+}
+
+#page-heading nav.onactive {
+  padding: 10px;
 }
 
 #page-heading .slider-containers {
