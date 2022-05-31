@@ -198,3 +198,9 @@ html {
         }
     }
 }
+// for screen size < 740 px ~ <=739px
+@media (max-width: 740px){
+    #form-content {
+        background-color: black;
+    }
+}
