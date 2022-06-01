@@ -92,7 +92,7 @@ html {
 }
 
 #page-heading nav .nav-width {
-  width: 70%;
+  width: 62vw;
 }
 
 #page-heading nav li a {
@@ -222,6 +222,12 @@ html {
 
 #page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item .card-film-info h3 a {
   text-decoration: none;
+  line-height: 20px;
+  height: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 #page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item .card-film-info p {
@@ -289,6 +295,10 @@ html {
   opacity: 0.7;
 }
 
+#page-heading nav .connected-to-web .avatar-wrapper {
+  position: relative;
+}
+
 #page-heading nav .connected-to-web .avatar-wrapper img {
   cursor: pointer;
   border-radius: 50%;
@@ -298,6 +308,57 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   width: 28px;
+}
+
+#page-heading nav .connected-to-web .avatar-wrapper .avatar-down {
+  position: absolute;
+  -webkit-animation: fadeInForCard 0.3s ease;
+          animation: fadeInForCard 0.3s ease;
+  cursor: default;
+  background-color: #212529;
+  z-index: 9999;
+  right: 0;
+  top: 46px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  will-change: opacity,transform;
+  min-width: 230px;
+  padding: 8px 24px;
+}
+
+#page-heading nav .connected-to-web .avatar-wrapper .avatar-down .avatar__down-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#page-heading nav .connected-to-web .avatar-wrapper .avatar-down .avatar__down-header img {
+  border-radius: 50%;
+  height: 50px;
+  margin: 10px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50px;
+}
+
+#page-heading nav .connected-to-web .avatar-wrapper .avatar-down .avatar__down-header p {
+  margin: 0 0 0 12px;
+}
+
+#page-heading nav .connected-to-web .avatar-wrapper .avatar-down a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 6px 0;
 }
 
 #page-heading nav.onactive {
