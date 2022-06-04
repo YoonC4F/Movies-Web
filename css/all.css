@@ -1857,4 +1857,103 @@ html {
 #page-movie-detail-box .MD-other .col-12 {
   margin-bottom: 20px;
 }
+
+#page-my-info-box h2 {
+  font-size: 2.2rem;
+  padding-bottom: 10px;
+  margin: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#page-my-info-box form {
+  max-width: 400px;
+  padding: 20px;
+  margin: auto;
+}
+
+#page-my-info-box form .PMI-wrapper {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+#page-my-info-box form .PMI-wrapper img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-bottom: 12px;
+}
+
+#page-my-info-box form .PMI-wrapper label {
+  display: block;
+}
+
+#page-my-info-box form .PMI-wrapper label[for="avatar"] .change-avatar {
+  position: absolute;
+  font-size: 2.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  top: 132px;
+  left: 208px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+#page-my-info-box form .PMI-wrapper label[for="avatar"] .change-avatar:hover {
+  background-color: #666;
+}
+
+#page-my-info-box form .PMI-wrapper label[for="avatar"] input[type="file"] {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+#page-my-info-box form .PMI-wrapper label[for="avatar"] h3 {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#page-my-info-box form .PMI-wrapper input[type="text"] {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0e5e5;
+  background-position: 10px 14px;
+  background-repeat: no-repeat;
+  padding: 10px;
+  line-height: 1.8rem;
+  outline: none;
+}
+
+#page-my-info-box form .PMI-wrapper label[for="female"], #page-my-info-box form .PMI-wrapper label[for="male"] {
+  display: inline-block;
+}
+
+#page-my-info-box form input[type="submit"] {
+  margin: 10px 0;
+  font-size: 1.6rem;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  font-weight: 500;
+}
+
+#page-my-info-box form input[type="submit"]:hover {
+  background-color: #a19999;
+}
 /*# sourceMappingURL=all.css.map */
