@@ -110,106 +110,211 @@
         </nav>
     </div>
     <div id="page-movie-detail-box">
-        <div class="MD-main container">
-            <div class="MD__main-trailer">
-                <iframe width="420" height="315"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                </iframe>
-            </div>
-            <div class="MD__main-info">
-                <h1>13 Reasons Why - S01E02 - Tape 1, Side B
-                    <span>$29.00</span>
-                </h1>
-                <div class="info-rating">
-                    <div class="IF-left">
-                        <span>40min</span>
-                        <span>Added: 31.03.2017</span>
-                        <div class="view-like-wrapper">
-                            <div class="VL-view">
-                                <!-- icon mat -->
-                                <span>202 views</span>
-                            </div>
-                            <div class="VL-like">
-                                <!-- button dung before de chen icon ~ content dung unicode de hien icon like thay vi tag i-->
-                                <span>1+</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- rating -->
-                    <div class="IF-right">
-                        <div class="IF-right-wrapper">
-                            <i class="fas fa-star voted"></i>
-                            <i class="fas fa-star voted"></i>
-                            <i class="fas fa-star voted"></i>
-                            <i class="fas fa-star voted"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="IF-voted-quantity">
-                            <span>1 Voted</span>
-                        </div>
-                    </div> 
+        <div class="container">
+            <div class="MD-main">
+                <div class="MD__main-trailer">
+                    <iframe
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
                 </div>
-                <div class="info-content">
-                    <div class="IC-left">
-                        <div class="IC-left-wrapper">
-                            <p>Praesent iaculis, purus ac vehicula mattis, arcu lorem blandit nisl, non laoreet dui mi eget elit. Donec porttitor ex vel augue maximus luctus. Vivamus finibus nibh eu nunc volutpat suscipit. Nam vulputate libero quis nisi euismod rhoncus. Sed eu euismod felis. Aenean ullamcorper dapibus odio ac tempor. Aliquam iaculis, quam vitae imperdiet consectetur, mi ante semper metus, ac efficitur nisi justo ut eros. Maecenas suscipit turpis fermentum elementum scelerisque.</p>
-                            <p>Sed leo elit, volutpat quis aliquet eu, elementum eget arcu. Aenean ligula tellus, malesuada eu ultrices vel, vulputate sit amet metus. Donec tincidunt sapien ut enim feugiat, sed egestas dolor ornare.</p>
-                        </div>
-                        <!-- overflow:hiden, chi thay cai height voi set cai transition cho muot la dc-->
-                        <span>Read Mores</span>
-                    </div>
-                    <div class="IC-right">
-                        <span>Tags: </span>
-                        <a href="#">Brother</a>
-                        <a href="#">Brother Relationship</a>,
-                        <a href="#">King</a>,
-                        <a href="#">Vikings</a>
-                    </div>
-                </div>
-                <button class="btn active">
-                    <i class="fas fa-shopping-cart"></i>
-                    ADD TO CARD</button>
-            </div>
-            <div class="MD__main-comment">
-                <!-- onclick de hien cmt -->
-                <h1>Comment (<span>50</span>)</h1>
-
-                <d class="MDM-comment-wrapper">
-                    <!-- hien dong cmt cua minh dau tien neu da login/ neu chua thi hien thong bao -->
-                    <div class="myselft_cmt">
-                        <p class="ms_mustbelog">You must be <a href="#">Logged in</a> to post a review.</p>
-                        <div class="comment-item">
-                            <img src="./images/avatar.jpg" alt="">
-                            <div class="comment-item-right">
-                                <input type="text" name="ms_cmt" placeholder="How do you feel about film...">
-                                <!-- ranh lam them cai btn binh luan + btn huy -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- chua cac cmt -->
-                    <div class="comment-list">
-                        <div class="comment-item">
-                            <img src="./images/avatar.jpg" alt="">
-                            <div class="comment-item-right">
-                                <p>
-                                    <strong>Akther Jabeen</strong>
-                                    <span>March 4, 2019</span>
-                                </p>
-                                <p>Good</p>
-                                <div class="commnent-react">
-                                    <!-- to mau neu like -->
-                                    <i class="fas fa-thumbs-up"></i>
+                <div class="MD__main-info">
+                    <h1>13 Reasons Why - S01E02 - Tape 1, Side B
+                        <span>$29.00</span>
+                    </h1>
+                    <div class="info-rating">
+                        <div class="IF-left">
+                            <span class="IF-left-span">40min</span>
+                            <span>Added: 31.03.2017</span>
+                            <div class="view-like-wrapper">
+                                <div class="VL-view">
+                                    <i class="fas fa-eye"></i>
+                                    <span>202 views</span>
+                                </div>
+                                <!-- them liked de chuyen mau btn like -->
+                                <div class="VL-like">
+                                    <!-- button dung before de chen icon ~ content dung unicode de hien icon like thay vi tag i-->
                                     <span>1+</span>
                                 </div>
                             </div>
                         </div>
+                        <!-- rating -->
+                        <div class="IF-right">
+                            <div class="IF-right-wrapper">
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="IF-voted-quantity">
+                                <span>1 Voted</span>
+                            </div>
+                        </div> 
                     </div>
-                    <!-- load du lieu lay cmt tiep -->
-                    <span>Read Mores</span>
-                </d>
+                    <div class="info-content">
+                        <!-- them class show de hien het content -->
+                        <div class="IC-left">
+                            <div class="IC-left-wrapper">
+                                <p>Praesent iaculis, purus ac vehicula mattis, arcu lorem blandit nisl, non laoreet dui mi eget elit. Donec porttitor ex vel augue maximus luctus. Vivamus finibus nibh eu nunc volutpat suscipit. Nam vulputate libero quis nisi euismod rhoncus. Sed eu euismod felis. Aenean ullamcorper dapibus odio ac tempor. Aliquam iaculis, quam vitae imperdiet consectetur, mi ante semper metus, ac efficitur nisi justo ut eros. Maecenas suscipit turpis fermentum elementum scelerisque.</p>
+                                <p>Sed leo elit, volutpat quis aliquet eu, elementum eget arcu. Aenean ligula tellus, malesuada eu ultrices vel, vulputate sit amet metus. Donec tincidunt sapien ut enim feugiat, sed egestas dolor ornare.</p>
+                            </div>
+                            <!-- overflow:hiden, chi thay cai height voi set cai transition cho muot la dc-->
+                            <span>Read Mores</span>
+                        </div>
+                        <div class="IC-right">
+                            <span>Tags: </span>
+                            <a href="#">Brother</a>
+                            <a href="#">Brother Relationship</a>,
+                            <a href="#">King</a>,
+                            <a href="#">Vikings</a>
+                        </div>
+                    </div>
+                    <button class="btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        ADD TO CARD</button>
+                </div>
+                <div class="MD__main-comment">
+                    <!-- onclick de hien cmt -->
+                    <h1>Comment (<span>50</span>)</h1>
+    
+                    <div class="MDM-comment-wrapper">
+                        <!-- hien dong cmt cua minh dau tien neu da login/ neu chua thi hien thong bao -->
+                        <div class="myselft_cmt show">
+                            <p class="ms_mustbelog">You must be <a href="#">Logged in</a> to post a review.</p>
+                            <div class="comment-item">
+                                <img src="./images/avatar.jpg" alt="">
+                                <div class="comment-item-right">
+                                    <input type="text" name="ms_cmt" placeholder="How do you feel about film...">
+                                    <!-- ranh lam them cai btn binh luan + btn huy -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- chua cac cmt -->
+                        <div class="comment-list">
+                            <div class="comment-item">
+                                <img src="./images/avatar.jpg" alt="">
+                                <div class="comment-item-right">
+                                    <p>
+                                        <strong>Akther Jabeen</strong>
+                                        <span>March 4, 2019</span>
+                                    </p>
+                                    <p>Good</p>
+                                    <div class="commnent-react">
+                                        <!-- to mau neu like -->
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span>1+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- load du lieu lay cmt tiep -->
+                            <a href="#" class="load-more">Read Mores</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="MD-other">
+                <h1>YOU MAY ALSO LIKE</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="movie-img-wrapper">
+                            <a href="#">
+                                <div>
+                                    <img src="./images/gallery-1.jpg" alt="movie-img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="movie-description">
+                            <h6><a href="#">Ant-Man and the Wasp</a></h6>
+                            <p>2018, USA, Action</p>
+                            <div class="description-star">
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="movie-price">
+                                <p>$29.00</p>
+                                <a href="#">BUY MOVIE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="movie-img-wrapper">
+                            <a href="#">
+                                <div>
+                                    <img src="./images/gallery-1.jpg" alt="movie-img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="movie-description">
+                            <h6><a href="#">Ant-Man and the Wasp</a></h6>
+                            <p>2018, USA, Action</p>
+                            <div class="description-star">
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="movie-price">
+                                <p>$29.00</p>
+                                <a href="#">BUY MOVIE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="movie-img-wrapper">
+                            <a href="#">
+                                <div>
+                                    <img src="./images/gallery-1.jpg" alt="movie-img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="movie-description">
+                            <h6><a href="#">Ant-Man and the Wasp</a></h6>
+                            <p>2018, USA, Action</p>
+                            <div class="description-star">
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="movie-price">
+                                <p>$29.00</p>
+                                <a href="#">BUY MOVIE</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <div class="movie-img-wrapper">
+                            <a href="#">
+                                <div>
+                                    <img src="./images/gallery-1.jpg" alt="movie-img">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="movie-description">
+                            <h6><a href="#">Ant-Man and the Wasp</a></h6>
+                            <p>2018, USA, Action</p>
+                            <div class="description-star">
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star voted"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="movie-price">
+                                <p>$29.00</p>
+                                <a href="#">BUY MOVIE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="MD-other"></div>
     </div>
     <div id="page-footer">
         <div class="container">
