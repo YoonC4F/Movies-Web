@@ -1956,4 +1956,210 @@ html {
 #page-my-info-box form input[type="submit"]:hover {
   background-color: #a19999;
 }
+
+#page-shop-card-box h2 {
+  font-size: 3.2rem;
+  padding-bottom: 10px;
+  margin: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#page-shop-card-box .shopping-card-list {
+  margin-bottom: 32px;
+}
+
+#page-shop-card-box .shopping-card-list .SCL-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+#page-shop-card-box .shopping-card-list .SCL-heading .markAll-wrapper {
+  margin-right: 20px;
+}
+
+#page-shop-card-box .shopping-card-list .SCL-heading .markAll-wrapper label {
+  cursor: pointer;
+  padding-left: 4px;
+  margin-bottom: 0;
+}
+
+#page-shop-card-box .shopping-card-list .SCL-heading .markAll-wrapper input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+}
+
+#page-shop-card-box .shopping-card-list .SCL-heading .markAll-wrapper input[type=checkbox]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: -2px;
+  background-color: #e9e9e9;
+}
+
+#page-shop-card-box .shopping-card-list .SCL-heading .markAll-wrapper input[type=checkbox]:checked:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: -2px;
+  background-color: #1E80EF;
+}
+
+#page-shop-card-box .shopping-card-list .SCL-heading .markAll-wrapper input[type=checkbox]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 4px;
+}
+
+#page-shop-card-box .shopping-card-list .SCL-heading input[type="text"] {
+  width: 30%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  background-image: url(../images/searchicon.png);
+  background-position: 10px 14px;
+  background-repeat: no-repeat;
+  padding: 14px 20px 14px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  line-height: 1.8rem;
+  outline: none;
+}
+
+#page-shop-card-box .shopping-card-list .SCL-heading p {
+  margin-left: auto;
+  margin-bottom: 0;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #e9d4bb;
+  padding: 16px 8px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item a img {
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item .card-film-info {
+  max-width: 60%;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item .card-film-info h3 {
+  font-size: 2rem;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item .card-film-info h3 a {
+  text-decoration: none;
+  color: #000;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item .card-film-info p {
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item .price-delete-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: right;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item .price-delete-wrapper p {
+  display: inline-block;
+  margin-bottom: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item .price-delete-wrapper a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#page-shop-card-box .shopping-card-total {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #e9d4bb;
+  padding: 16px 8px;
+  border-radius: 10px;
+  margin-bottom: 90px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#page-shop-card-box .shopping-card-total p {
+  margin-bottom: 0;
+  text-align: right;
+  margin-right: 10px;
+}
+
+#page-shop-card-box .btn-nav {
+  margin: 10px 0 60px;
+  text-align: right;
+}
+
+#page-shop-card-box .btn-nav a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #000;
+  background-color: #e9d4bb;
+  padding: 12px 26px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+#page-shop-card-box .btn-nav a:nth-of-type(2) {
+  color: #fff;
+  background-color: #1266f1;
+}
+
+#page-shop-card-box .btn-nav a:hover {
+  opacity: 0.8;
+}
 /*# sourceMappingURL=all.css.map */

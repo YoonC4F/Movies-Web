@@ -1577,3 +1577,169 @@ html {
         }
     }
 }
+
+// ================ page-shop-card-box =======  
+#page-shop-card-box {
+    h2 {
+        font-size: 3.2rem;
+        padding-bottom: 10px;
+        margin: 10px 0;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+    .shopping-card-list {
+        margin-bottom: 32px;
+        .SCL-heading {
+            font-size: 1.8rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            .markAll-wrapper {
+                margin-right: 20px;
+                label {
+                    cursor: pointer;
+                    padding-left: 4px;
+                    margin-bottom: 0;
+                }
+                input[type="checkbox"] {
+                    position: relative;
+                    cursor: pointer;
+                }
+                input[type=checkbox]:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    top: 0;
+                    left: -2px;
+                    background-color:#e9e9e9;
+                }
+                input[type=checkbox]:checked:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    top: 0;
+                    left: -2px;
+                    background-color:#1E80EF;
+                }
+                input[type=checkbox]:checked:after {
+                    content: "";
+                    display: block;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 2px 2px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: 2px;
+                    left: 4px;
+                }
+            }
+            input[type="text"] {
+                width: 30%;
+                border: none;
+                border-bottom: 2px solid #ccc;
+                border-radius: 4px;
+                background-color: white;
+                background-image: url(../images/searchicon.png);
+                background-position: 10px 14px;
+                background-repeat: no-repeat;
+                padding: 14px 20px 14px 40px;
+                -webkit-transition: width 0.4s ease-in-out;
+                transition: width 0.4s ease-in-out;
+                line-height: 1.8rem;
+                outline: none;
+            }
+            p {
+                margin-left: auto;
+                margin-bottom: 0;
+            }
+        }
+        .shopping-card-item {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: #e9d4bb;
+            padding: 16px 8px;
+            border-radius: 10px;
+            display: flex;
+            margin-bottom: 20px;
+            a {
+                display: inline-block;
+                margin-right: 10px;
+                img {
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 10px;
+                }
+            }
+            .card-film-info {
+                max-width: 60%;
+                h3 {
+                    font-size: 2rem;
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+                p{
+                    font-size:1.4rem;
+                    margin-top: 20px;
+                }
+            }
+            .price-delete-wrapper {
+                flex: 1;
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                text-align: right;
+                p{
+                    display: inline-block;
+                    margin-bottom: 0;
+                    flex: 1;
+                }
+                a {
+                    flex: 1;
+                }
+            }
+        }
+    }
+    .shopping-card-total {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: #e9d4bb;
+        padding: 16px 8px;
+        border-radius: 10px;
+        margin-bottom: 90px;
+        font-size: 2rem;
+        font-weight: 500;
+        p{
+            margin-bottom: 0;
+            text-align: right;
+            margin-right: 10px;
+        }
+    }
+    .btn-nav {
+        margin: 10px 0 60px;
+        text-align: right;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.6rem;
+            color: #000;
+            background-color: #e9d4bb;
+            padding: 12px 26px;
+            font-weight: 500;
+            border-radius: 5px;
+        }
+        a:nth-of-type(2) {
+            color: #fff;
+            background-color: #1266f1;
+        }
+        a:hover {
+            opacity: 0.8;
+        }
+    }
+}
