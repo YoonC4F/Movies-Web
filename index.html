@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
 </head>
 
 <body>
@@ -27,38 +27,114 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ml-auto" id="collapsibleNavbar">
-                    <li class="nav-item active">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./movies.html">Movies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Search</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-shopping-bag"></i>
-                            <span>2</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./signup.html">Sign up</a>
-                    </li>
+                <!-- them d-flex justify-content-between nav-width de tao khoang cach khi login-->
+                <ul class="navbar-nav ml-auto d-flex justify-content-between nav-width" id="collapsibleNavbar">
+                    <div class="const-component-wrapper d-flex">
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./movies.html">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                        <!-- them not-admin de an link nay -->
+                        <li class="nav-item not-admin">
+                            <a class="nav-link" href="#">Admin Manager</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>2</span>
+                            </a>
+                        </li> -->
+                    </div>
+                    <!-- them d-flex de hien -->
+                    <div class="connecting-to-web d-flex"> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./signup.html">Sign up</a>
+                        </li>
+                    </div>
+                    <div class="connected-to-web">
+                        <div class="shopping-card-wrapper">
+                            <!-- them class onclick de hien demo-card-film -->
+                            <span class="shoping-card-title">Shopping Card</span>
+                            <div class="demo-card-film">
+                                <div class="MyCard-header d-flex">
+                                    <h6>Shopping Card</h6>
+                                    <a href="#">View all notification</a>
+                                </div>
+                                <div class="MyCard-content">
+                                    <div class="MyCard-content-item">
+                                        <a href="#">
+                                            <img src="./images/gallery-1.jpg">
+                                        </a>
+                                        <div class="card-film-info">
+                                            <h3><a href="#">Twenty Five Twenty One Twenty Five Twenty One</a></h3>
+                                            <p class="card-last-access">Last access was 13 day ago</p>
+                                            <!-- mac dinh la chua tra, them paid de hien tra roi -->
+                                            <div class="card-checkpay paid">
+                                                <span>Paid</span> 
+                                                <!-- dung after de hien tich -->
+                                                <a href="#">Pay Now$$</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="notification-wrapper">
+                            <span><i class="fas fa-bell"></i></span>
+                            <div class="notification-list"></div>
+                        </div> -->
+                        <!-- add class onclick to appear avatar-down-->
+                        <div class="avatar-wrapper">
+                            <img src="./images/avatar.jpg" alt="avatar">
+                            <div class="avatar-down">
+                                <div class="avatar__down-header">
+                                    <img src="./images/avatar.jpg" alt="avatar">
+                                    <p>Le Minh Quan</p>
+                                </div>
+                                <hr>
+                                <div class="avatar__down-info">
+                                    <a href="#">Your Info</a>
+                                </div>
+                                <hr>
+                                <div class="avatar__down-singout">
+                                    <a href="#">Sign out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </ul>
             </div>
         </nav>
         <div class="PH-slider container">
             <div class="slider-containers">
                 <div class="slider-container">
-                    <div class="slider">
+                    <div class="slider1 slider-PLclone">
+                        <a href="#">
+                            <img src="./images/slider-5-570x364.jpg" alt="1" width="570" height="364">
+                        </a>
+                        <h6>
+                            <a href="#">IT (2017)</a>
+                        </h6>
+                        <p>2017, USA, Drama, Horror, Thriller</p>
+                    </div>
+                    <div class="slider1 slider-Lclone">
+                        <a href="#">
+                            <img src="./images/slider-6-570x364.jpg" alt="1" width="570" height="364">
+                        </a>
+                        <h6>
+                            <a href="#">IT (2017)</a>
+                        </h6>
+                        <p>2017, USA, Drama, Horror, Thriller</p>
+                    </div>
+                    <div class="slider1">
                         <a href="#">
                             <img src="./images/slider-1-570x364.jpg" alt="1" width="570" height="364">
                         </a>
@@ -67,7 +143,52 @@
                         </h6>
                         <p>2017, USA, Drama, Horror, Thriller</p>
                     </div>
-                    <div class="slider">
+                    <div class="slider1">
+                        <a href="#">
+                            <img src="./images/slider-2-570x364.jpg" alt="1" width="570" height="364">
+                        </a>
+                        <h6>
+                            <a href="#">IT (2017)</a>
+                        </h6>
+                        <p>2017, USA, Drama, Horror, Thriller</p>
+                    </div>
+                    <div class="slider1">
+                        <a href="#">
+                            <img src="./images/slider-3-570x364.jpg" alt="1" width="570" height="364">
+                        </a>
+                        <h6>
+                            <a href="#">IT (2017)</a>
+                        </h6>
+                        <p>2017, USA, Drama, Horror, Thriller</p>
+                    </div>
+                    <div class="slider1">
+                        <a href="#">
+                            <img src="./images/slider-4-570x364.jpg" alt="1" width="570" height="364">
+                        </a>
+                        <h6>
+                            <a href="#">IT (2017)</a>
+                        </h6>
+                        <p>2017, USA, Drama, Horror, Thriller</p>
+                    </div>
+                    <div class="slider1">
+                        <a href="#">
+                            <img src="./images/slider-5-570x364.jpg" alt="1" width="570" height="364">
+                        </a>
+                        <h6>
+                            <a href="#">IT (2017)</a>
+                        </h6>
+                        <p>2017, USA, Drama, Horror, Thriller</p>
+                    </div>
+                    <div class="slider1">
+                        <a href="#">
+                            <img src="./images/slider-6-570x364.jpg" alt="1" width="570" height="364">
+                        </a>
+                        <h6>
+                            <a href="#">IT (2017)</a>
+                        </h6>
+                        <p>2017, USA, Drama, Horror, Thriller</p>
+                    </div>
+                    <div class="slider1 slider-Fclone">
                         <a href="#">
                             <img src="./images/slider-1-570x364.jpg" alt="1" width="570" height="364">
                         </a>
@@ -76,36 +197,9 @@
                         </h6>
                         <p>2017, USA, Drama, Horror, Thriller</p>
                     </div>
-                    <div class="slider">
+                    <div class="slider1 slider-SFclone">
                         <a href="#">
-                            <img src="./images/slider-1-570x364.jpg" alt="1" width="570" height="364">
-                        </a>
-                        <h6>
-                            <a href="#">IT (2017)</a>
-                        </h6>
-                        <p>2017, USA, Drama, Horror, Thriller</p>
-                    </div>
-                    <div class="slider">
-                        <a href="#">
-                            <img src="./images/slider-1-570x364.jpg" alt="1" width="570" height="364">
-                        </a>
-                        <h6>
-                            <a href="#">IT (2017)</a>
-                        </h6>
-                        <p>2017, USA, Drama, Horror, Thriller</p>
-                    </div>
-                    <div class="slider">
-                        <a href="#">
-                            <img src="./images/slider-1-570x364.jpg" alt="1" width="570" height="364">
-                        </a>
-                        <h6>
-                            <a href="#">IT (2017)</a>
-                        </h6>
-                        <p>2017, USA, Drama, Horror, Thriller</p>
-                    </div>
-                    <div class="slider">
-                        <a href="#">
-                            <img src="./images/slider-1-570x364.jpg" alt="1" width="570" height="364">
+                            <img src="./images/slider-2-570x364.jpg" alt="1" width="570" height="364">
                         </a>
                         <h6>
                             <a href="#">IT (2017)</a>
@@ -116,9 +210,9 @@
             </div>
         </div>
         <div class="PH-dot-items">
-            <span class="dot-item active"></span>
-            <span class="dot-item"></span>
-            <span class="dot-item"></span>
+            <span class="dot-item active" data-index="1"></span>
+            <span class="dot-item" data-index="2"></span>
+            <span class="dot-item" data-index="3"></span>
         </div>
     </div>
     <div id="page-content">

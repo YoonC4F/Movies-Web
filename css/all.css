@@ -89,6 +89,9 @@ html {
   padding: 51px 10px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  background-color: #151515;
+  width: 100%;
+  z-index: 9999;
 }
 
 #page-heading nav .nav-width {
@@ -108,11 +111,16 @@ html {
   background-color: #d81a24;
 }
 
+#page-heading nav .const-component-wrapper .not-admin {
+  display: none;
+}
+
 #page-heading nav .connecting-to-web {
   display: none;
 }
 
 #page-heading nav .connected-to-web {
+  display: none;
   font-size: 1.6rem;
   font-weight: 600;
   padding: 0 10px;
@@ -364,6 +372,17 @@ html {
 
 #page-heading nav.onactive {
   padding: 10px;
+  position: fixed;
+  top: 0;
+}
+
+#page-heading .PH-slider {
+  -webkit-transition: all 0.3 linear;
+  transition: all 0.3 linear;
+}
+
+#page-heading nav.onactive + .PH-slider {
+  padding-top: 170px;
 }
 
 #page-heading .slider-containers {
@@ -375,17 +394,15 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 300%;
-  gap: 42px;
+  width: 500%;
 }
 
-#page-heading .slider-containers .slider {
-  width: 50%;
+#page-heading .slider-containers .slider1 {
+  margin: 0 21px;
 }
 
 #page-heading .slider-containers img {
   max-width: 100%;
-  height: auto;
   opacity: .6;
   -webkit-transition: .3s;
   transition: .3s;

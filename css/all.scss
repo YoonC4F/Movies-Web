@@ -45,6 +45,9 @@ html {
     nav {
         padding:51px 10px;
         transition: all 0.3s ease;
+        background-color: #151515;
+        width: 100%;
+        z-index: 9999;
         .nav-width {
             width: 62vw;
         }
@@ -59,10 +62,16 @@ html {
         li a:hover, li a.active {
             background-color: #d81a24;
         }
+        .const-component-wrapper {
+            .not-admin {
+                display: none;
+            }
+        }
         .connecting-to-web {
             display: none;
         }
         .connected-to-web {
+            display: none;
             font-size: 1.6rem;
             font-weight: 600;
             padding: 0 10px;
@@ -281,21 +290,32 @@ html {
     }
     nav.onactive{
         padding:10px;
+        position: fixed;
+        top: 0;
     }
+    .PH-slider{
+        transition: all 0.3 linear;
+    }
+    nav.onactive + .PH-slider {
+        padding-top: 170px;
+    }
+
     .slider-containers {
+        // position: relative;
         width: 100%;
         overflow: hidden;
         .slider-container {
             display: flex;
-            width: 300%;
-            gap: 42px;
+            width: 500%;
+            // gap: 42px;
         }
-        .slider {
-            width: 50%;
+        .slider1 {
+            // width: 50%;
+            margin: 0 21px;
         }
         img {
             max-width: 100%;
-            height: auto;
+            // height: auto;
             opacity: .6;
             transition: .3s;
         }
