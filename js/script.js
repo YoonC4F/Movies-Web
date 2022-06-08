@@ -174,6 +174,176 @@ function handeIndex() {
             sliderItem.style.transform = `translateX(${startPSlide}px)`;
         }
     }, 3000);
+
+    // =======watch movies==============
+    let btnControllers = $$('#page-content .btn-controller .btn');
+    function filterMovies(selector){
+        let movieControlleds = $$('.btn-controller + .row .col-lg-3');  //nodelist
+
+        for(let movieControlled of movieControlleds){
+            if(movieControlled.classList.contains(selector)){
+                movieControlled.style.display = 'block';
+            }
+            else movieControlled.style.display = 'none';
+        }
+    };
+    filterMovies('top_rate');
+    function btnRemoveClassActive(){
+        for(let btnController of btnControllers){
+            if(btnController.classList.contains('active')){
+                btnController.classList.remove('active');
+                break;
+            }
+        }
+    }
+
+    for(let btnController of btnControllers){
+        btnController.addEventListener("click", ()=>{
+            btnRemoveClassActive();
+            btnController.classList.add('active');
+            let choice = btnController.dataset.choice;
+            filterMovies(choice);
+        })
+    }
+
+
+    // ========testmonials =================================
+    let T_show = $('.T-review-show');
+    let T_container = $('.T-review-container');
+    let T_reviewers = $$('.T-reviewer');
+    let T_size = T_reviewers.length;
+    let T_oneReviewer = T_container.clientWidth/T_size;
+    let T_sliderSpace = 0;
+
+    let T_pressed = false;
+    let T_interval = true;
+    let T_startP, T_currentP;
+    let T_body = document.documentElement;
+    let T_dotItems = $$('.T-dot-item');
+    var T_id;
+
+    function T_getTranslateX() {
+        var style = window.getComputedStyle(T_container);
+        var matrix = new WebKitCSSMatrix(style.transform);
+        return matrix.m41;
+    }
+
+    function T_moveSlide(){
+        T_interval = true;
+        T_sliderSpace += T_oneReviewer;
+        T_container.style.transition = "transform 0.4s ease-in-out";
+        T_container.style.transform = `translateX(${-(T_sliderSpace)}px)`;
+    }
+    // truot slide
+    T_id = setInterval(T_moveSlide, 3000);
+
+    function T_setDot(index){
+        for(let T_dotItem of T_dotItems){
+            if(T_dotItem.classList.contains("active")){
+                T_dotItem.classList.remove("active");
+            }
+        }
+        T_dotItems[index-1].classList.add("active");
+    }
+    // config dot + clear interval
+    T_container.addEventListener('transitionend',(e)=>{
+        let space = -T_getTranslateX();
+        T_sliderSpace = -T_getTranslateX();
+        if(space===0 || space === T_oneReviewer*(1)){
+            T_setDot(1);
+        }
+        if(space === T_oneReviewer*(2)|| space === T_oneReviewer*(3)){
+            T_setDot(2);
+        }
+        if(space >= T_oneReviewer*(4)){
+            T_setDot(3);
+            clearInterval(T_id)
+            T_interval = false;
+            return;
+        }
+        if(!T_interval){
+            T_interval = true;
+            T_id = setInterval(T_moveSlide, 3000)
+        }
+    })
+
+    // handle mouse touch
+    T_container.addEventListener('mousedown', (e)=>{
+        e.preventDefault();
+        T_pressed = true;
+        T_startP = e.screenX - T_getTranslateX();
+        T_container.style.transition = "none";
+        if(T_interval){
+            clearInterval(T_id)
+            T_interval = false;
+        }
+    })
+
+    T_container.addEventListener('mousemove', T_handleMousemove);
+    T_body.addEventListener("mousemove", T_handleMousemove);
+
+    function T_handleMousemove(e){
+        e.preventDefault();
+        if(!T_pressed) return;
+        T_currentP = e.screenX-T_startP;
+        T_container.style.transform = `translateX(${T_currentP}px)`;
+
+        let y = T_getTranslateX();
+        if(y >= 0){
+            T_container.style.transform = `translateX(${(300*y)/(300+y)}px)`;
+            T_startP = e.screenX - y;
+        }
+        if(-y >= (T_container.clientWidth - T_show.clientWidth)){
+            let k = -y - (T_container.clientWidth - T_show.clientWidth);
+            T_container.style.transform = `translateX(-${(T_container.clientWidth - T_show.clientWidth + (300*k)/(k+300))}px)`;
+            T_startP = e.screenX - y;
+        }
+    }
+
+    T_container.addEventListener("mouseup", T_handleMouseUp);
+    T_body.addEventListener("mouseup", T_handleMouseUp);
+
+    function T_handleMouseUp(e) {
+        e.preventDefault();
+        T_pressed = false;
+        let halfOfWidth = T_oneReviewer/2;
+        let i=1;
+        while(true) {
+            if(-T_getTranslateX()>halfOfWidth*i){
+                i++;
+                continue;
+            }
+            break;
+        }
+        T_container.style.transition = "transform 0.4s ease-in-out";
+
+        // handlde transform
+        if(i%2 === 0 ){
+            // counter=i/2;
+            if(i>=8) i=8;
+            T_container.style.transform = `translateX(${-(i)*halfOfWidth}px)`;
+        }
+        else {
+            // counter=(i-1)/2;
+            T_container.style.transform = `translateX(${-(i-1)*halfOfWidth}px)`;
+        }
+        // console.log(i)
+        if(!T_interval && T_sliderSpace < T_oneReviewer*(4)){
+            T_interval = true;
+            T_id = setInterval(T_moveSlide, 3000)
+        }
+    }   
+    // handle when click dot btn
+    for(let T_dotItem of T_dotItems){
+        T_dotItem.addEventListener('click', function(){
+            T_setDot(T_dotItem.dataset.index);
+            if(T_interval){
+                T_interval = false;
+                clearInterval(T_id);
+            }
+            T_container.style.transform = `translateX(-${(T_dotItem.dataset.index-1)*2*T_oneReviewer}px)`;
+        })
+    }
 }
 
 

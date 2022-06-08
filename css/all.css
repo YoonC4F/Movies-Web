@@ -472,6 +472,13 @@ html {
   position: relative;
 }
 
+.col-12 .movie-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .col-12 .movie-img-wrapper div {
   position: relative;
 }
@@ -513,6 +520,8 @@ html {
 }
 
 .col-12 .movie-img-wrapper .play-interact i {
+  z-index: 99;
+  cursor: pointer;
   color: white;
   font-size: 60px;
   position: absolute;
