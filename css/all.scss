@@ -283,7 +283,7 @@ html {
             .avatar-wrapper.onclick .avatar-down{
                 display: block;
             }
-            .shopping-card-wrapper:hover, .avatar-wrapper:hover {
+            .shopping-card-wrapper:hover:not(.onclick), .avatar-wrapper:hover:not(.onclick) {
                 opacity: 0.8;
             }
         }
@@ -1121,6 +1121,7 @@ html {
 
 // ================== movies==============
 #page-movies-box {
+    margin-top: 72px;
     display: flex;
     .left-content {
         padding-top: 16px;
@@ -1222,7 +1223,7 @@ html {
                     margin-right: 8px;
                     border-radius: 12px;
                     border: 2px solid #ccc;
-                    width: 96px;
+                    width: 130px;
                     padding: 12px 14px;
                 }
                 .RC-search_wrapper {
@@ -1285,6 +1286,7 @@ html {
 
 // ================ movie-detail ==================
 #page-movie-detail-box {
+    margin-top: 72px;
     .MD-main {
         .MD__main-trailer {
             iframe {
@@ -1498,6 +1500,7 @@ html {
         }
     }
     .MD-other {
+        margin-bottom: 50px;
         h1 {
             font-size: 46px;
             font-weight: 600;

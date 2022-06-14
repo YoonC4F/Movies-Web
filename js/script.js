@@ -2,16 +2,44 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-
-var formlist = document.querySelectorAll('form');
-for(var form of formlist) {
-    form.onsubmit = (e) => {
-        e.preventDefault();
+function handleAll(){
+    //prevent default form
+    var formlist = document.querySelectorAll('form');
+    for(var form of formlist) {
+        form.onsubmit = (e) => {
+            e.preventDefault();
+        }
     }
+
+    //btn shoping card + btn avatar
+    let shopingCardBtn = $('#page-heading .shoping-card-title');
+    let avatarBtn = $('#page-heading .avatar-wrapper img')
+    shopingCardBtn.onclick = function() {
+        this.parentElement.classList.toggle('onclick');
+    }
+    avatarBtn.onclick = function() {
+        this.parentElement.classList.toggle('onclick');
+    }
+
+    document.onclick = (e)=> {  
+        if(!e.target.closest('.shopping-card-wrapper')){
+            if(shopingCardBtn.parentElement.classList.contains('onclick')){
+                shopingCardBtn.parentElement.classList.remove('onclick');
+            }
+        }
+        if(!e.target.closest('.avatar-wrapper')){
+            if(avatarBtn.parentElement.classList.contains('onclick')){
+                avatarBtn.parentElement.classList.remove('onclick');
+            }
+        }
+    }
+
 }
 
+handleAll();
+
 // index.html 
-function handeIndex() {
+function handleIndex() {
     //============== nav =================
     let nav_header = $("#page-heading nav");
     window.onscroll = ()=> {
@@ -346,5 +374,74 @@ function handeIndex() {
     }
 }
 
+//movies.html
+function handleMovies(){
+    //btn pagination
+    function handleClickPa(index){
+        
+        for(let paginationBtn of paginationBtns){
+            if(paginationBtn.classList.contains('active')){
+                paginationBtn.classList.remove('active');
+            }
+        }
+        paginationBtns[index].classList.add('active');
+        if(index == 1){
+            paginationBtns[0].style.display='none';
+        }
+        else {
+            paginationBtns[0].style.display='inline-block';
+        }
+        if(index == paginationBtns.length-2) {
+            paginationBtns[paginationBtns.length-1].style.display='none';
+        }
+        else {
+            paginationBtns[paginationBtns.length-1].style.display='inline-block';
+        }
+    }
 
-handeIndex()
+    let paginationBtns = $$('.RC-pagination a');
+    let currentIndex;
+    for(let paginationBtn of paginationBtns){
+        paginationBtn.addEventListener('click', ()=>{
+            // let index = paginationBtn.dataset.index;
+            // if(index>=1 && index <= paginationBtns.length-2){
+            //     handleClickPa(index);
+            //     currentIndex = index;
+            //     // if(index == 1){
+            //     //     paginationBtns[0].style.display='none';
+            //     //     paginationBtns[paginationBtns.length-1].style.display='inline-block';
+            //     // }
+            //     // if(index == paginationBtns.length-2) {
+            //     //     paginationBtns[0].style.display='inline-block';
+            //     //     paginationBtns[paginationBtns.length-1].style.display='none';
+            //     // }
+            // }
+            // else{
+            //     let activeIndex = $('.RC-pagination a.active').dataset.index;
+            //     if(index == 0){
+
+            //     }
+            // }
+            let index = paginationBtn.dataset.index;
+            let activeIndex = $('.RC-pagination a.active').dataset.index;
+            if(index>=1 && index <= paginationBtns.length-2){
+                currentIndex = index;
+            }
+            else if(index == 0) {
+                if(activeIndex == 1){
+                    currentIndex = paginationBtns.length-2;
+                }
+                else currentIndex = Number(activeIndex) - 1;
+            }
+            else {
+                if(activeIndex == 6){
+                    currentIndex = 1;
+                }
+                else currentIndex = Number(activeIndex) + 1;
+            }
+            handleClickPa(currentIndex)
+        })
+    }
+}
+
+
