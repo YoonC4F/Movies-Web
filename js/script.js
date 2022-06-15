@@ -2,7 +2,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-function handleAll(){
+function handleAll_Except_Login_SignOut(){
     //prevent default form
     var formlist = document.querySelectorAll('form');
     for(var form of formlist) {
@@ -34,24 +34,23 @@ function handleAll(){
         }
     }
 
-}
+    //============== nav =================
+    // let nav_header = $("#page-heading nav");
+    // window.onscroll = ()=> {
+    //     if(window.scrollY>100){
+    //         nav_header.classList.remove("container");
+    //         nav_header.classList.add("onactive");
+    //     }
+    //     else{
+    //         nav_header.classList.remove("onactive");
+    //         nav_header.classList.add("container");
+    //     }
+    // }
 
-handleAll();
+}
 
 // index.html 
 function handleIndex() {
-    //============== nav =================
-    let nav_header = $("#page-heading nav");
-    window.onscroll = ()=> {
-        if(window.scrollY>100){
-            nav_header.classList.remove("container");
-            nav_header.classList.add("onactive");
-        }
-        else{
-            nav_header.classList.remove("onactive");
-            nav_header.classList.add("container");
-        }
-    }
     // ==============slider-btn-click==============
     let sliderContainer = $(".slider-containers");
     let sliderItem = $(".slider-container");
@@ -444,4 +443,61 @@ function handleMovies(){
     }
 }
 
+// login page
+function handleLogin(){
+    let formInputs = $$('input:not([type="checkbox"])');
+    let showBtn = $('.captcha-wrapper span');
+    let closeLoginFailBtn = $('.login-fail span');
 
+    for(var formInput of formInputs){
+        formInput.onblur = function(e){ 
+            if(e.target.value){
+                this.parentElement.classList.add('has-text');
+            }
+            else this.parentElement.classList.remove('has-text');
+        }
+    }
+
+    showBtn.onclick = function(){
+        this.parentElement.parentElement.classList.toggle('none');
+    }
+
+    closeLoginFailBtn.onclick = function(){
+        this. parentElement.classList.remove('show');
+    }
+}
+
+// sign up page
+function handleSignUp() {
+    let formInputs = $$('input:not([type="checkbox"])');
+    let agreeBtn = $('input[type="checkbox"]');
+    let submitBtn = $('.form-submit');
+    let form = $('.form-wrapper form');
+    let agreeErrors = $('.agree-error');
+    console.log("🚀 ~ file: script.js ~ line 476 ~ handleSignUp ~ agreeErrors", agreeErrors)
+
+    for(var formInput of formInputs){
+        formInput.onblur = function(e){ 
+            if(e.target.value){
+                this.parentElement.classList.add('has-text');
+            }
+            else this.parentElement.classList.remove('has-text');
+        }
+    }
+
+    submitBtn.onclick = (e) => {
+        e.preventDefault();
+        if(agreeBtn.checked){
+            form.submit();
+            return;
+        }
+        agreeErrors.innerHTML ='Agree Terms of Service to create a new account'
+        agreeErrors.animate([
+            {transform: 'translateX(-4px)'},
+            {transform: 'translateX(4px)'}
+        ],{
+            duration: 200,
+            iterations: 2,
+        })
+    }
+}

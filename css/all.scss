@@ -297,7 +297,7 @@ html {
         transition: all 0.3 linear;
     }
     nav.onactive + .PH-slider {
-        padding-top: 170px;
+        padding-top: 100px;
     }
 
     .slider-containers {
@@ -929,7 +929,7 @@ html {
     background: #322f2f;
 }
 
-// =================forms =================
+// =================login =================
 #form-content{
     color: #fff;
     position: relative;
@@ -961,6 +961,32 @@ html {
         margin-bottom: 90px;
         font-size: 1.6rem;
         color: #fff;
+        .login-fail {
+            display: none;
+            background-color: #4abfe4;
+            // display: flex;
+            justify-content: space-between;
+            padding: 14px 10px;
+            border-radius: 6px;
+            color: #2b2927;
+            margin-bottom: 10px;
+            h3 {
+                font-size: 1.6rem;
+                margin-bottom: 0;
+            }
+            span {
+                padding: 0 6px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border-radius: 4px;
+            }
+            span:hover {
+                background-color: #007bff;
+            }
+        }
+        .login-fail.show {
+            display: flex;
+        }
         form {
             h1 {
                 font-size: 3.2rem;
@@ -1075,6 +1101,14 @@ html {
                 a {
                     color: #b3b3b3;
                 }
+                p {
+                    margin-bottom: 0;
+                    color: #dc3535;
+                    font-weight: 500;
+                    padding: 20px 0;
+                    margin-left: -26px;
+                    margin-right: -32px;
+                }
             }
         }
         .link-to-rest {
@@ -1091,9 +1125,7 @@ html {
             margin-top:11px;
             p:nth-of-type(1) {
                 margin: 13px 0;
-                span {
-                    display:none; 
-                }
+
             }
             p {
                 span {
@@ -1108,9 +1140,6 @@ html {
         .captcha-wrapper.none {
             p:nth-of-type(1) {
                 margin: 13px 0;
-                span {
-                    display:inline-block; 
-                }
             }
             p:nth-of-type(2){
                 display: none;
@@ -1604,6 +1633,10 @@ html {
         }
         input[type="submit"]:hover {
             background-color: rgb(161, 153, 153);
+        }
+        input[type="date"] {
+            width: 100%;
+            padding: 4px;
         }
     }
 }

@@ -382,7 +382,7 @@ html {
 }
 
 #page-heading nav.onactive + .PH-slider {
-  padding-top: 170px;
+  padding-top: 100px;
 }
 
 #page-heading .slider-containers {
@@ -1247,6 +1247,41 @@ html {
   color: #fff;
 }
 
+#form-content .form-wrapper .login-fail {
+  display: none;
+  background-color: #4abfe4;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 14px 10px;
+  border-radius: 6px;
+  color: #2b2927;
+  margin-bottom: 10px;
+}
+
+#form-content .form-wrapper .login-fail h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+#form-content .form-wrapper .login-fail span {
+  padding: 0 6px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+#form-content .form-wrapper .login-fail span:hover {
+  background-color: #007bff;
+}
+
+#form-content .form-wrapper .login-fail.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #form-content .form-wrapper form h1 {
   font-size: 3.2rem;
   font-weight: 700;
@@ -1381,6 +1416,15 @@ html {
   color: #b3b3b3;
 }
 
+#form-content .form-wrapper form .other-wrapper p {
+  margin-bottom: 0;
+  color: #dc3535;
+  font-weight: 500;
+  padding: 20px 0;
+  margin-left: -26px;
+  margin-right: -32px;
+}
+
 #form-content .form-wrapper .link-to-rest {
   color: #737373;
   font-size: 1.6rem;
@@ -1401,10 +1445,6 @@ html {
   margin: 13px 0;
 }
 
-#form-content .form-wrapper .captcha-wrapper p:nth-of-type(1) span {
-  display: none;
-}
-
 #form-content .form-wrapper .captcha-wrapper p span {
   cursor: pointer;
   color: #0080ff;
@@ -1416,10 +1456,6 @@ html {
 
 #form-content .form-wrapper .captcha-wrapper.none p:nth-of-type(1) {
   margin: 13px 0;
-}
-
-#form-content .form-wrapper .captcha-wrapper.none p:nth-of-type(1) span {
-  display: inline-block;
 }
 
 #form-content .form-wrapper .captcha-wrapper.none p:nth-of-type(2) {
@@ -1990,6 +2026,11 @@ html {
 
 #page-my-info-box form input[type="submit"]:hover {
   background-color: #a19999;
+}
+
+#page-my-info-box form input[type="date"] {
+  width: 100%;
+  padding: 4px;
 }
 
 #page-shop-card-box h2 {
