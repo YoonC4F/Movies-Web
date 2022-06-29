@@ -264,6 +264,11 @@ html {
                         p {
                             margin: 0 0 0 12px;
                         }
+                        span {
+                            margin-left: 12px;
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                        }
 
                     }
                     a {
@@ -441,8 +446,14 @@ html {
         }
         p {
             font-size: 1.6rem;
+            line-height: 2rem;
+            height: 2rem;
             color: #b7b7b7;
             margin: 10px 0 16px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
         }
         .description-star {
             padding-bottom: 10px;
@@ -464,15 +475,16 @@ html {
                 color: #000;
                 margin: 0;
             }
-            a {
+            span {
+                display: inline-block;
+                cursor: pointer;
                 text-decoration: none;
                 color: #d81a24;
-                font-size: 18px;
+                font-size: 1.8rem;
                 transition: 0.4s;
                 font-weight: 700;
-                letter-spacing: 0.14em;
             }
-            a:hover {
+            span:hover {
                 color: #000;
             }
         }
@@ -1152,6 +1164,7 @@ html {
 #page-movies-box {
     margin-top: 72px;
     display: flex;
+    min-height: 592px;
     .left-content {
         padding-top: 16px;
         width: 250px;
@@ -1330,7 +1343,7 @@ html {
                 display: flex;
                 span {
                     margin-left: auto;
-                    font-weight:400;
+                    font-weight:500;
                 }
                 margin-bottom: 0.5rem;
             }
@@ -1375,6 +1388,7 @@ html {
                 .IF-right {
                     font-size: 1.4rem;
                     .IF-right-wrapper {
+                        cursor: pointer;
                         i.voted {
                             color: yellow;
                         }
@@ -1398,8 +1412,21 @@ html {
                     }
                     span {
                         margin-top: 5px;
+                        color: darkblue;
+                        font-weight: 500;
+                        a {
+                            font-weight: 400;
+                            text-decoration: none;
+                            &:hover {
+                                color: #0056b3;
+                            }
+                        }
+                    }
+                    span.read-more {
                         cursor: pointer;
-                        color: #007bff;
+                        &:hover {
+                            opacity: 0.8;
+                        }
                     }
                 }
                 .IC-left.show {
@@ -1409,6 +1436,7 @@ html {
                     }
                 }
                 .IC-right {
+                    text-align: end;
                     -webkit-box-flex: 0;
                     flex: 0 0 37%;
                     max-width: 37%;
@@ -1493,6 +1521,7 @@ html {
                 .comment-list {
                     .comment-item {
                         display: flex;
+                        margin: 6px 0;
                         img {
                             width: 50px;
                             height: 50px;
@@ -1503,23 +1532,30 @@ html {
                             font-size:1.4rem;
                             p {
                                 margin-top: 0;
-                                margin-bottom: 1rem;
+                                margin-bottom: 0.6rem;
                             }
                             .commnent-react {
+                                cursor: pointer;
                                 i {
                                     font-size: 1.6rem;
                                     margin-right: 5px;
+                                    &:hover {
+                                        opacity: 0.8;
+                                    }
                                 }
                             }
                         }
                     }
                     .load-more {
+                        cursor: pointer;
                         font-size: 1.6rem;
                         text-decoration: none;
                         margin-top: 10px;
                         display: inline-block;
-                        padding:8px 0;
+                        padding:8px 16px;
                         border-radius: 10px;
+                        font-weight: 500;
+                        background-color: #2196f39c;
                     }
                     .load-more:hover {
                         background-color: #ccc;
@@ -1549,17 +1585,37 @@ html {
 }
 
 // ================ my-info =============
-#page-my-info-box {
+#page-my-info-change-password-box {
+    min-height: 546px;
+    margin-bottom: 30px;
     h2 {
         font-size: 2.2rem;
         padding-bottom: 10px;
         margin: 10px 0;
         border-bottom: 1px solid rgba(0,0,0,.1);
+        margin-top: 88px;
     }
-    form {
+    .form-wrapper {
         max-width: 400px;
         padding: 20px;
         margin: auto;
+        .error__mess-wrapper {
+            display: flex;
+            background-color: #ccc;
+            height: 46px;
+            border-radius: 10px;
+            font-size: 1.6rem;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            span {
+                font-weight: 500;
+            }
+            i:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+        }
         .PMI-wrapper {
             position: relative;
             font-size: 1.6rem;
@@ -1598,15 +1654,8 @@ html {
                     top: 0;
                     display: none;
                 }
-                h3 {
-                    display: block;
-                    font-size: 2.6rem;
-                    font-weight: 600;
-                    text-align: center;
-                    margin-bottom: 30px;
-                }
             }
-            input[type="text"] {
+            input[type="text"], input[type="password"] {
                 width: 100%;
                 border: none;
                 border-bottom: 2px solid #ccc;
@@ -1615,11 +1664,25 @@ html {
                 background-position: 10px 14px;
                 background-repeat: no-repeat;
                 padding: 10px;
-                line-height: 1.8rem;
+                line-height: 2.2rem;
                 outline: none;
             }
             label[for="female"], label[for="male"] {
                 display: inline-block;
+            }
+            h3 {
+                display: block;
+                font-size: 2.6rem;
+                font-weight: 600;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .money-wrapper {
+                display: flex;
+                justify-content: space-between;
+                a{
+                    text-decoration: none;
+                }
             }
         }
         input[type="submit"] {
@@ -1643,6 +1706,8 @@ html {
 
 // ================ page-shop-card-box =======  
 #page-shop-card-box {
+    margin-top: 94px;
+    min-height: 592px;
     h2 {
         font-size: 3.2rem;
         padding-bottom: 10px;
@@ -1745,16 +1810,33 @@ html {
                 }
             }
             .card-film-info {
-                max-width: 60%;
+                width: 34%;
                 h3 {
                     font-size: 2rem;
                     a {
                         text-decoration: none;
                         color: #000;
+                        line-height: 2.4rem;
+                        height: 2.4rem;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
                     }
                 }
                 p{
-                    font-size:1.4rem;
+                    font-size:1.5rem;
+                    margin-top: 20px;
+                }
+            }
+            .card__film-created {
+                padding: 0px 66px;
+                text-transform: uppercase;
+                h3 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1.5rem;
                     margin-top: 20px;
                 }
             }
@@ -1768,9 +1850,14 @@ html {
                     display: inline-block;
                     margin-bottom: 0;
                     flex: 1;
+                    text-align: center;
                 }
-                a {
-                    flex: 1;
+                span {
+                    padding: 8px;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.8;
+                    }
                 }
             }
         }

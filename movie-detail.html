@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div id="page-heading">
         <!-- them onactive de thay doi size cua header -->
@@ -47,7 +49,7 @@
                         </li> -->
                     </div>
                     <!-- them d-flex de hien -->
-                    <div class="connecting-to-web"> 
+                    <div class="connecting-to-web">
                         <li class="nav-item">
                             <a class="nav-link" href="./login.html">Login</a>
                         </li>
@@ -74,7 +76,7 @@
                                             <p class="card-last-access">Last access was 13 day ago</p>
                                             <!-- mac dinh la chua tra, them paid de hien tra roi -->
                                             <div class="card-checkpay paid">
-                                                <span>Paid</span> 
+                                                <span>Paid</span>
                                                 <!-- dung after de hien tich -->
                                                 <a href="#">Pay Now$$</a>
                                             </div>
@@ -114,8 +116,7 @@
         <div class="container">
             <div class="MD-main">
                 <div class="MD__main-trailer">
-                    <iframe
-                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY">
                     </iframe>
                 </div>
                 <div class="MD__main-info">
@@ -150,17 +151,27 @@
                             <div class="IF-voted-quantity">
                                 <span>1 Voted</span>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                     <div class="info-content">
                         <!-- them class show de hien het content -->
                         <div class="IC-left">
                             <div class="IC-left-wrapper">
-                                <p>Praesent iaculis, purus ac vehicula mattis, arcu lorem blandit nisl, non laoreet dui mi eget elit. Donec porttitor ex vel augue maximus luctus. Vivamus finibus nibh eu nunc volutpat suscipit. Nam vulputate libero quis nisi euismod rhoncus. Sed eu euismod felis. Aenean ullamcorper dapibus odio ac tempor. Aliquam iaculis, quam vitae imperdiet consectetur, mi ante semper metus, ac efficitur nisi justo ut eros. Maecenas suscipit turpis fermentum elementum scelerisque.</p>
-                                <p>Sed leo elit, volutpat quis aliquet eu, elementum eget arcu. Aenean ligula tellus, malesuada eu ultrices vel, vulputate sit amet metus. Donec tincidunt sapien ut enim feugiat, sed egestas dolor ornare.</p>
+                                <p>
+                                    <span class="IC-directed">Director: <a href="#">Dang Khoa</a></span> </br>
+                                    <span class="IC-actor">Main actor: 
+                                        <a href="#">Yasuo1</a>,
+                                        <a href="#">Yasuo12</a>,
+                                        <a href="#">Yasuo13</a>
+                                    </span>
+                                </p>
+                                <p>Twenty-five, twenty-one is a 2022 South Korean television series directed by Jung
+                                    Ji-hyun and starring Kim Tae-ri, Nam Joo-hyuk, Bona, Choi Hyun-wook and Lee
+                                    Joo-myung. The film follows the romantic lives of five characters spanning from 1998
+                                    to 2021.</p>
                             </div>
                             <!-- overflow:hiden, chi thay cai height voi set cai transition cho muot la dc-->
-                            <span>Read Mores</span>
+                            <span class="read-more">Read Mores</span>
                         </div>
                         <div class="IC-right">
                             <span>Tags: </span>
@@ -177,7 +188,7 @@
                 <div class="MD__main-comment">
                     <!-- onclick de hien cmt -->
                     <h1>Comment (<span>50</span>)</h1>
-    
+
                     <div class="MDM-comment-wrapper">
                         <!-- hien dong cmt cua minh dau tien neu da login/ neu chua thi hien thong bao -->
                         <div class="myselft_cmt show">
@@ -208,7 +219,7 @@
                                 </div>
                             </div>
                             <!-- load du lieu lay cmt tiep -->
-                            <a href="#" class="load-more">Read Mores</a>
+                            <span class="load-more">Read Mores</span>
                         </div>
                     </div>
                 </div>
@@ -237,7 +248,7 @@
                             </div>
                             <div class="movie-price">
                                 <p>$29.00</p>
-                                <a href="#">BUY MOVIE</a>
+                                <span>ADD TO CARD</span>
                             </div>
                         </div>
                     </div>
@@ -261,7 +272,7 @@
                             </div>
                             <div class="movie-price">
                                 <p>$29.00</p>
-                                <a href="#">BUY MOVIE</a>
+                                <span>ADD TO CARD</span>
                             </div>
                         </div>
                     </div>
@@ -285,7 +296,7 @@
                             </div>
                             <div class="movie-price">
                                 <p>$29.00</p>
-                                <a href="#">BUY MOVIE</a>
+                                <span>ADD TO CARD</span>
                             </div>
                         </div>
                     </div>
@@ -309,7 +320,7 @@
                             </div>
                             <div class="movie-price">
                                 <p>$29.00</p>
-                                <a href="#">BUY MOVIE</a>
+                                <span>ADD TO CARD</span>
                             </div>
                         </div>
                     </div>
@@ -336,6 +347,9 @@
         </div>
     </div>
     <script src="./js/script.js"></script>
-    
+    <script>
+        handleMovieDetail();
+    </script>
 </body>
+
 </html>

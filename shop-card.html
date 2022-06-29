@@ -115,52 +115,64 @@
             <div class="shopping-card-list">
                 <div class="SCL-heading">
                     <div class="markAll-wrapper">
-                        <input type="checkbox" id="markAll">
+                        <input type="checkbox" id="markAll" onclick="handleCheckAll(this)" checked>
                         <label for="markAll">Choose All</label>
                     </div>
-                    <input type="text" name="card-find-film" id="">
+                    <input onkeyup="handldeSearchCart(this)" type="text" name="card-find-film" id="">
                     <p><span>3 items</span> in Card</p>
                 </div>
                 <div class="shopping-card-item">
-                    <input type="checkbox" name="item-index" checked>
+                    <input onclick="handleCheckItem(this)" type="checkbox" name="item-index" checked>
                     <a href="#">
                         <img src="./images/gallery-1.jpg">
                     </a>
                     <div class="card-film-info">
-                        <h3><a href="#">Twenty Five Twenty One Twenty Five Twenty One</a></h3>
-                        <p class="card-director">Yasuo123</p>                      
+                        <h3><a href="#">Twenty Five Twenty One</a></h3>
+                        <p class="card-director">Long An cuc</p>                      
+                    </div>
+                    <div class="card__film-created">
+                        <h3>Created At:</h3>
+                        <p>27-06-2022</p>
                     </div>
                     <div class="price-delete-wrapper">
-                        <p>$29.00</p>
-                        <a href="#"><i class="fas fa-trash"></i></a>
+                        <p>$39.00</p>
+                        <span onclick="handleDelete(this)" data-id=""><i class="fas fa-trash"></i></span>
                     </div>
                 </div>
                 <div class="shopping-card-item">
-                    <input type="checkbox" name="item-index" checked>
+                    <input onclick="handleCheckItem(this)" type="checkbox" name="item-index" checked>
                     <a href="#">
                         <img src="./images/gallery-1.jpg">
                     </a>
                     <div class="card-film-info">
-                        <h3><a href="#">Twenty Five Twenty One Twenty Five Twenty One</a></h3>
-                        <p class="card-director">Yasuo123</p>                      
+                        <h3><a href="#">Yasuo montage</a></h3>
+                        <p class="card-director">Khoa khoan hong</p>                      
+                    </div>
+                    <div class="card__film-created">
+                        <h3>Created At:</h3>
+                        <p>12-12-2002</p>
                     </div>
                     <div class="price-delete-wrapper">
-                        <p>$29.00</p>
-                        <a href="#"><i class="fas fa-trash"></i></a>
+                        <p>$25.00</p>
+                        <span onclick="handleDelete(this)" data-id=""><i class="fas fa-trash"></i></span>
                     </div>
                 </div>
                 <div class="shopping-card-item">
-                    <input type="checkbox" name="item-index" checked>
+                    <input onclick="handleCheckItem(this)" type="checkbox" name="item-index" checked>
                     <a href="#">
                         <img src="./images/gallery-1.jpg">
                     </a>
                     <div class="card-film-info">
-                        <h3><a href="#">Twenty Five Twenty One Twenty Five Twenty One</a></h3>
-                        <p class="card-director">Yasuo123</p>                      
+                        <h3><a href="#">Cau Vang tau hai</a></h3>
+                        <p class="card-director">hoang ccccccccccc</p>                      
+                    </div>
+                    <div class="card__film-created">
+                        <h3>Created At:</h3>
+                        <p>13-06-2020</p>
                     </div>
                     <div class="price-delete-wrapper">
-                        <p>$29.00</p>
-                        <a href="#"><i class="fas fa-trash"></i></a>
+                        <p>$329.00</p>
+                        <span onclick="handleDelete(this)" data-id=""><i class="fas fa-trash"></i></span>
                     </div>
                 </div>
             </div>
@@ -192,5 +204,6 @@
         </div>
     </div>
     <script src="./js/script.js"></script>
+    <script>handleMoneys()</script>
 </body>
 </html>

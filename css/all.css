@@ -348,6 +348,12 @@ html {
   margin: 0 0 0 12px;
 }
 
+#page-heading nav .connected-to-web .avatar-wrapper .avatar-down .avatar__down-header span {
+  margin-left: 12px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
 #page-heading nav .connected-to-web .avatar-wrapper .avatar-down a {
   color: #fff;
   text-decoration: none;
@@ -565,8 +571,14 @@ html {
 
 .col-12 .movie-description p {
   font-size: 1.6rem;
+  line-height: 2rem;
+  height: 2rem;
   color: #b7b7b7;
   margin: 10px 0 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .col-12 .movie-description .description-star {
@@ -601,17 +613,18 @@ html {
   margin: 0;
 }
 
-.col-12 .movie-description .movie-price a {
+.col-12 .movie-description .movie-price span {
+  display: inline-block;
+  cursor: pointer;
   text-decoration: none;
   color: #d81a24;
-  font-size: 18px;
+  font-size: 1.8rem;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   font-weight: 700;
-  letter-spacing: 0.14em;
 }
 
-.col-12 .movie-description .movie-price a:hover {
+.col-12 .movie-description .movie-price span:hover {
   color: #000;
 }
 
@@ -1467,6 +1480,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 592px;
 }
 
 #page-movies-box .left-content {
@@ -1676,7 +1690,7 @@ html {
 
 #page-movie-detail-box .MD-main .MD__main-info h1 span {
   margin-left: auto;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 #page-movie-detail-box .MD-main .MD__main-info .info-rating {
@@ -1734,6 +1748,10 @@ html {
   font-size: 1.4rem;
 }
 
+#page-movie-detail-box .MD-main .MD__main-info .info-rating .IF-right .IF-right-wrapper {
+  cursor: pointer;
+}
+
 #page-movie-detail-box .MD-main .MD__main-info .info-rating .IF-right .IF-right-wrapper i.voted {
   color: yellow;
 }
@@ -1761,8 +1779,25 @@ html {
 
 #page-movie-detail-box .MD-main .MD__main-info .info-content .IC-left span {
   margin-top: 5px;
+  color: darkblue;
+  font-weight: 500;
+}
+
+#page-movie-detail-box .MD-main .MD__main-info .info-content .IC-left span a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+#page-movie-detail-box .MD-main .MD__main-info .info-content .IC-left span a:hover {
+  color: #0056b3;
+}
+
+#page-movie-detail-box .MD-main .MD__main-info .info-content .IC-left span.read-more {
   cursor: pointer;
-  color: #007bff;
+}
+
+#page-movie-detail-box .MD-main .MD__main-info .info-content .IC-left span.read-more:hover {
+  opacity: 0.8;
 }
 
 #page-movie-detail-box .MD-main .MD__main-info .info-content .IC-left.show .IC-left-wrapper {
@@ -1773,6 +1808,7 @@ html {
 }
 
 #page-movie-detail-box .MD-main .MD__main-info .info-content .IC-right {
+  text-align: end;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 37%;
       flex: 0 0 37%;
@@ -1871,6 +1907,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 6px 0;
 }
 
 #page-movie-detail-box .MD-main .MD__main-comment .MDM-comment-wrapper .comment-list .comment-item img {
@@ -1886,7 +1923,11 @@ html {
 
 #page-movie-detail-box .MD-main .MD__main-comment .MDM-comment-wrapper .comment-list .comment-item .comment-item-right p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+#page-movie-detail-box .MD-main .MD__main-comment .MDM-comment-wrapper .comment-list .comment-item .comment-item-right .commnent-react {
+  cursor: pointer;
 }
 
 #page-movie-detail-box .MD-main .MD__main-comment .MDM-comment-wrapper .comment-list .comment-item .comment-item-right .commnent-react i {
@@ -1894,13 +1935,20 @@ html {
   margin-right: 5px;
 }
 
+#page-movie-detail-box .MD-main .MD__main-comment .MDM-comment-wrapper .comment-list .comment-item .comment-item-right .commnent-react i:hover {
+  opacity: 0.8;
+}
+
 #page-movie-detail-box .MD-main .MD__main-comment .MDM-comment-wrapper .comment-list .load-more {
+  cursor: pointer;
   font-size: 1.6rem;
   text-decoration: none;
   margin-top: 10px;
   display: inline-block;
-  padding: 8px 0;
+  padding: 8px 16px;
   border-radius: 10px;
+  font-weight: 500;
+  background-color: #2196f39c;
 }
 
 #page-movie-detail-box .MD-main .MD__main-comment .MDM-comment-wrapper .comment-list .load-more:hover {
@@ -1929,27 +1977,59 @@ html {
   margin-bottom: 20px;
 }
 
-#page-my-info-box h2 {
+#page-my-info-change-password-box {
+  min-height: 546px;
+  margin-bottom: 30px;
+}
+
+#page-my-info-change-password-box h2 {
   font-size: 2.2rem;
   padding-bottom: 10px;
   margin: 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 88px;
 }
 
-#page-my-info-box form {
+#page-my-info-change-password-box .form-wrapper {
   max-width: 400px;
   padding: 20px;
   margin: auto;
 }
 
-#page-my-info-box form .PMI-wrapper {
+#page-my-info-change-password-box .form-wrapper .error__mess-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ccc;
+  height: 46px;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+}
+
+#page-my-info-change-password-box .form-wrapper .error__mess-wrapper span {
+  font-weight: 500;
+}
+
+#page-my-info-change-password-box .form-wrapper .error__mess-wrapper i:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#page-my-info-change-password-box .form-wrapper .PMI-wrapper {
   position: relative;
   font-size: 1.6rem;
   font-weight: 500;
   margin: 20px 0;
 }
 
-#page-my-info-box form .PMI-wrapper img {
+#page-my-info-change-password-box .form-wrapper .PMI-wrapper img {
   width: 170px;
   height: 170px;
   border-radius: 50%;
@@ -1959,11 +2039,11 @@ html {
   margin-bottom: 12px;
 }
 
-#page-my-info-box form .PMI-wrapper label {
+#page-my-info-change-password-box .form-wrapper .PMI-wrapper label {
   display: block;
 }
 
-#page-my-info-box form .PMI-wrapper label[for="avatar"] .change-avatar {
+#page-my-info-change-password-box .form-wrapper .PMI-wrapper label[for="avatar"] .change-avatar {
   position: absolute;
   font-size: 2.5rem;
   width: 40px;
@@ -1978,25 +2058,17 @@ html {
   text-align: center;
 }
 
-#page-my-info-box form .PMI-wrapper label[for="avatar"] .change-avatar:hover {
+#page-my-info-change-password-box .form-wrapper .PMI-wrapper label[for="avatar"] .change-avatar:hover {
   background-color: #666;
 }
 
-#page-my-info-box form .PMI-wrapper label[for="avatar"] input[type="file"] {
+#page-my-info-change-password-box .form-wrapper .PMI-wrapper label[for="avatar"] input[type="file"] {
   position: absolute;
   top: 0;
   display: none;
 }
 
-#page-my-info-box form .PMI-wrapper label[for="avatar"] h3 {
-  display: block;
-  font-size: 2.6rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-#page-my-info-box form .PMI-wrapper input[type="text"] {
+#page-my-info-change-password-box .form-wrapper .PMI-wrapper input[type="text"], #page-my-info-change-password-box .form-wrapper .PMI-wrapper input[type="password"] {
   width: 100%;
   border: none;
   border-bottom: 2px solid #ccc;
@@ -2005,15 +2077,36 @@ html {
   background-position: 10px 14px;
   background-repeat: no-repeat;
   padding: 10px;
-  line-height: 1.8rem;
+  line-height: 2.2rem;
   outline: none;
 }
 
-#page-my-info-box form .PMI-wrapper label[for="female"], #page-my-info-box form .PMI-wrapper label[for="male"] {
+#page-my-info-change-password-box .form-wrapper .PMI-wrapper label[for="female"], #page-my-info-change-password-box .form-wrapper .PMI-wrapper label[for="male"] {
   display: inline-block;
 }
 
-#page-my-info-box form input[type="submit"] {
+#page-my-info-change-password-box .form-wrapper .PMI-wrapper h3 {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#page-my-info-change-password-box .form-wrapper .PMI-wrapper .money-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#page-my-info-change-password-box .form-wrapper .PMI-wrapper .money-wrapper a {
+  text-decoration: none;
+}
+
+#page-my-info-change-password-box .form-wrapper input[type="submit"] {
   margin: 10px 0;
   font-size: 1.6rem;
   padding: 8px 16px;
@@ -2024,13 +2117,18 @@ html {
   font-weight: 500;
 }
 
-#page-my-info-box form input[type="submit"]:hover {
+#page-my-info-change-password-box .form-wrapper input[type="submit"]:hover {
   background-color: #a19999;
 }
 
-#page-my-info-box form input[type="date"] {
+#page-my-info-change-password-box .form-wrapper input[type="date"] {
   width: 100%;
   padding: 4px;
+}
+
+#page-shop-card-box {
+  margin-top: 94px;
+  min-height: 592px;
 }
 
 #page-shop-card-box h2 {
@@ -2159,7 +2257,7 @@ html {
 }
 
 #page-shop-card-box .shopping-card-list .shopping-card-item .card-film-info {
-  max-width: 60%;
+  width: 34%;
 }
 
 #page-shop-card-box .shopping-card-list .shopping-card-item .card-film-info h3 {
@@ -2169,10 +2267,30 @@ html {
 #page-shop-card-box .shopping-card-list .shopping-card-item .card-film-info h3 a {
   text-decoration: none;
   color: #000;
+  line-height: 2.4rem;
+  height: 2.4rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 #page-shop-card-box .shopping-card-list .shopping-card-item .card-film-info p {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item .card__film-created {
+  padding: 0px 66px;
+  text-transform: uppercase;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item .card__film-created h3 {
+  font-size: 2rem;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item .card__film-created p {
+  font-size: 1.5rem;
   margin-top: 20px;
 }
 
@@ -2196,12 +2314,16 @@ html {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  text-align: center;
 }
 
-#page-shop-card-box .shopping-card-list .shopping-card-item .price-delete-wrapper a {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+#page-shop-card-box .shopping-card-list .shopping-card-item .price-delete-wrapper span {
+  padding: 8px;
+  cursor: pointer;
+}
+
+#page-shop-card-box .shopping-card-list .shopping-card-item .price-delete-wrapper span:hover {
+  opacity: 0.8;
 }
 
 #page-shop-card-box .shopping-card-total {
