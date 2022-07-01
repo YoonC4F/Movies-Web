@@ -488,6 +488,25 @@ html {
                 color: #000;
             }
         }
+        .movie-action {
+            display: flex;
+            justify-content: space-around;
+            span {
+                cursor: pointer;
+                flex: 1;
+                text-align: center;
+                font-size: 1.8rem;
+                background-color: #bbc0ec;
+                padding: 10px;
+                border-radius: 4px;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+            span + span {
+                margin-left: 10px;
+            }
+        }
     }
 }
 .btn {
@@ -2051,14 +2070,23 @@ html {
                 }
             }
             .main-form {
+                .custom-label-ip {
+                    font-size: 1.6rem;
+                    line-height: 3rem;
+                    padding: 10px;
+                    border-radius: 6px;
+                }
+                .custom-search {
+                    background-image: url(../images/searchicon.png);
+                    background-position: 10px 14px; /* Position the search icon */
+                    background-repeat: no-repeat; /* Do not repeat the icon image */
+                    padding-left: 40px;
+                }
+                .customm-tableBody {
+                    cursor: pointer;
+                }
                 .form-group {
                     margin-bottom: 2rem;
-                    .custom-label-ip {
-                        font-size: 1.6rem;
-                        line-height: 3rem;
-                        padding: 10px;
-                        border-radius: 6px;
-                    }
                     .custom-btn {
                         padding: 10px 40px;
                         margin: 24px 0 20px -7px;
@@ -2068,12 +2096,6 @@ html {
                         display: flex;
                         align-items: center;
                         font-size: 2rem;
-                    }
-                    .custom-search {
-                        background-image: url(../images/searchicon.png);
-                        background-position: 10px 14px; /* Position the search icon */
-                        background-repeat: no-repeat; /* Do not repeat the icon image */
-                        padding-left: 40px;
                     }
                     .Result-infoWraper {
                         display: flex;
@@ -2086,9 +2108,6 @@ html {
                     .custom-tableWrapper {
                         max-height: 200px;
                         overflow: auto;
-                    }
-                    .customm-tableBody {
-                        cursor: pointer;
                     }
                     .custom-btn-addN {
                         padding: 10px 40px;
@@ -2107,6 +2126,44 @@ html {
                 .form-group.add-new {
                     .Add-Nwrapper {
                         display: flex;
+                    }
+                }
+                //handle-acc
+                .search-wrapper {
+                    display: flex;
+                    .custom__own-select{
+                        height: initial;
+                        width: 200px;
+                    }
+                }
+                .result_acc-wrapper{
+                    .customm-tableBody{
+                        i {
+                            padding: 6px 10px;
+                            border-radius: 6px;
+                            &:hover {
+                                background-color: #ccc;
+                            }
+                        }
+                        // span::before {
+                        //     display: inline-block;
+                        //     padding-right: 0.5rem;
+                        //     padding-left: 0.5rem;
+                        //     color: #6c757d;
+                        //     content: "|";
+                        // }
+                    }
+                    nav {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        margin: 40px 0;
+                        .custom-nav {
+                            a {
+                                font-size: 1.6rem;
+                                line-height: 3rem;
+                                padding: 6px 24px;
+                            }
+                        }
                     }
                 }
             }

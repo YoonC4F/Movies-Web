@@ -628,6 +628,34 @@ html {
   color: #000;
 }
 
+.col-12 .movie-description .movie-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.col-12 .movie-description .movie-action span {
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: #bbc0ec;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.col-12 .movie-description .movie-action span:hover {
+  opacity: 0.8;
+}
+
+.col-12 .movie-description .movie-action span + span {
+  margin-left: 10px;
+}
+
 .btn {
   padding: 15px 40px;
   font-size: 18px;
@@ -2561,15 +2589,28 @@ html {
   color: #6c5ffc;
 }
 
-#admin-wrapper .admin-main .main-cotainer .main-form .form-group {
-  margin-bottom: 2rem;
-}
-
-#admin-wrapper .admin-main .main-cotainer .main-form .form-group .custom-label-ip {
+#admin-wrapper .admin-main .main-cotainer .main-form .custom-label-ip {
   font-size: 1.6rem;
   line-height: 3rem;
   padding: 10px;
   border-radius: 6px;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .custom-search {
+  background-image: url(../images/searchicon.png);
+  background-position: 10px 14px;
+  /* Position the search icon */
+  background-repeat: no-repeat;
+  /* Do not repeat the icon image */
+  padding-left: 40px;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .customm-tableBody {
+  cursor: pointer;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group {
+  margin-bottom: 2rem;
 }
 
 #admin-wrapper .admin-main .main-cotainer .main-form .form-group .custom-btn {
@@ -2586,15 +2627,6 @@ html {
       -ms-flex-align: center;
           align-items: center;
   font-size: 2rem;
-}
-
-#admin-wrapper .admin-main .main-cotainer .main-form .form-group .custom-search {
-  background-image: url(../images/searchicon.png);
-  background-position: 10px 14px;
-  /* Position the search icon */
-  background-repeat: no-repeat;
-  /* Do not repeat the icon image */
-  padding-left: 40px;
 }
 
 #admin-wrapper .admin-main .main-cotainer .main-form .form-group .Result-infoWraper {
@@ -2616,10 +2648,6 @@ html {
   overflow: auto;
 }
 
-#admin-wrapper .admin-main .main-cotainer .main-form .form-group .customm-tableBody {
-  cursor: pointer;
-}
-
 #admin-wrapper .admin-main .main-cotainer .main-form .form-group .custom-btn-addN {
   padding: 10px 40px;
   margin: 24px 0 11px -7px;
@@ -2639,5 +2667,42 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .search-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .search-wrapper .custom__own-select {
+  height: initial;
+  width: 200px;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .result_acc-wrapper .customm-tableBody i {
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .result_acc-wrapper .customm-tableBody i:hover {
+  background-color: #ccc;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .result_acc-wrapper nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin: 40px 0;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .result_acc-wrapper nav .custom-nav a {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  padding: 6px 24px;
 }
 /*# sourceMappingURL=all.css.map */
