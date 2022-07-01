@@ -2367,4 +2367,277 @@ html {
 #page-shop-card-box .btn-nav a:hover {
   opacity: 0.8;
 }
+
+#admin-wrapper {
+  margin-top: 74px;
+  min-height: 696px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#admin-wrapper .admin-sidebar {
+  width: 270px;
+}
+
+#admin-wrapper .admin-sidebar ul li {
+  padding: 5px 28px 12px;
+  list-style: none;
+}
+
+#admin-wrapper .admin-sidebar ul li h3 {
+  padding: 4px 10px 10px 0;
+  text-transform: uppercase;
+  color: #74829c;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+#admin-wrapper .admin-sidebar ul li a {
+  display: block;
+  padding: 6px 0;
+  font-weight: 400;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+#admin-wrapper .admin-sidebar ul li a i {
+  font-size: 1.8rem;
+  color: #6c5ffc;
+  margin-right: 8px;
+}
+
+#admin-wrapper .admin-sidebar ul li a span {
+  font-size: 1.5rem;
+  color: #282f53;
+}
+
+#admin-wrapper .admin-sidebar ul li a:hover i, #admin-wrapper .admin-sidebar ul li a:hover span {
+  color: #6c5ffc;
+}
+
+#admin-wrapper .admin-sidebar ul li button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 6px 0;
+  font-weight: 400;
+  text-decoration: none;
+  margin-bottom: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+
+#admin-wrapper .admin-sidebar ul li button i {
+  font-size: 1.8rem;
+  color: #6c5ffc;
+  margin-right: 10px;
+}
+
+#admin-wrapper .admin-sidebar ul li button span {
+  font-size: 1.5rem;
+  color: #282f53;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: left;
+}
+
+#admin-wrapper .admin-sidebar ul li button:hover i, #admin-wrapper .admin-sidebar ul li button:hover span {
+  color: #6c5ffc;
+}
+
+#admin-wrapper .admin-sidebar ul li button .direction-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#admin-wrapper .admin-sidebar ul li button .direction-wrapper i {
+  font-size: 1.4rem;
+  position: relative;
+  top: 2px;
+}
+
+#admin-wrapper .admin-sidebar ul li button .direction-wrapper i:nth-child(2) {
+  display: none;
+}
+
+#admin-wrapper .admin-sidebar ul li .dropdown-manager {
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 10px;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+#admin-wrapper .admin-sidebar ul li .dropdown-manager li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  font-size: 13.3px;
+}
+
+#admin-wrapper .admin-sidebar ul li .dropdown-manager li a {
+  display: block;
+  width: 100%;
+  padding: 8px 8px;
+}
+
+#admin-wrapper .admin-sidebar ul li .dropdown-manager li a i, #admin-wrapper .admin-sidebar ul li .dropdown-manager li a span {
+  color: #74829c;
+}
+
+#admin-wrapper .admin-sidebar ul li.show .direction-wrapper i:nth-child(2) {
+  display: block;
+}
+
+#admin-wrapper .admin-sidebar ul li.show .direction-wrapper i:nth-child(1) {
+  display: none;
+}
+
+#admin-wrapper .admin-main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #f0f0f5;
+}
+
+#admin-wrapper .admin-main .main-cotainer {
+  padding: 0 32px;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-header {
+  margin: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 50px;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 0.2rem;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-header ul {
+  font-size: 1.3rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-header ul .breadcrumb-item a {
+  color: #76839a;
+  text-decoration: none;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-header ul .breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-header ul .breadcrumb-item.active a {
+  color: #6c5ffc;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group {
+  margin-bottom: 2rem;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group .custom-label-ip {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group .custom-btn {
+  padding: 10px 40px;
+  margin: 24px 0 20px -7px;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group .custom-close {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group .custom-search {
+  background-image: url(../images/searchicon.png);
+  background-position: 10px 14px;
+  /* Position the search icon */
+  background-repeat: no-repeat;
+  /* Do not repeat the icon image */
+  padding-left: 40px;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group .Result-infoWraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 90%;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group .Result-infoWraper p {
+  margin: 0;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group .custom-tableWrapper {
+  max-height: 200px;
+  overflow: auto;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group .customm-tableBody {
+  cursor: pointer;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group .custom-btn-addN {
+  padding: 10px 40px;
+  margin: 24px 0 11px -7px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group .Choose-Ewrapper, #admin-wrapper .admin-main .main-cotainer .main-form .form-group .Add-Nwrapper {
+  display: none;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group.choose-exist .Choose-Ewrapper {
+  display: block;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-form .form-group.add-new .Add-Nwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=all.css.map */

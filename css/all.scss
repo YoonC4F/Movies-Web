@@ -1898,3 +1898,220 @@ html {
         }
     }
 }
+
+// ================ Admins =============================
+#admin-wrapper{
+    margin-top: 74px;
+    min-height: 696px;
+    display: flex;
+    .admin-sidebar{
+        width: 270px;
+        ul{
+            li{
+                padding: 5px 28px 12px;
+                list-style: none;
+                h3 {
+                    padding: 4px 10px 10px 0;
+                    text-transform: uppercase;
+                    color: rgb(116, 130, 156);
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                }
+                a{
+                    display: block;
+                    padding: 6px 0;
+                    font-weight: 400;
+                    text-decoration: none;
+                    margin-bottom: 5px;
+                    i {
+                        font-size: 1.8rem;
+                        color:  #6c5ffc;
+                        margin-right: 8px;
+                    }
+                    span {
+                        font-size: 1.5rem;
+                        color: rgb(40, 47, 83);
+                    }
+                    &:hover {
+                        i, span {
+                            color:  #6c5ffc;;
+                        }
+                    }
+                }
+                button {
+                    display: flex;
+                    padding: 6px 0;
+                    font-weight: 400;
+                    text-decoration: none;
+                    margin-bottom: 5px;
+                    align-items: center;
+                    border: none;
+                    outline: none;
+                    background-color: inherit;
+                    cursor: pointer;
+                    width: 100%;
+                    i {
+                        font-size: 1.8rem;
+                        color:  #6c5ffc;
+                        margin-right: 10px;
+                    }
+                    span {
+                        font-size: 1.5rem;
+                        color: rgb(40, 47, 83);
+                        flex: 1 1 auto;
+                        text-align: left;
+                    }
+                    &:hover {
+                        i, span {
+                            color:  #6c5ffc;;
+                        }
+                    }
+                    .direction-wrapper {
+                        display: flex;
+                        align-items: center;
+                        i {
+                            font-size: 1.4rem;
+                            position: relative;
+                            top: 2px;
+                        }
+                        i:nth-child(2) {
+                            display: none;
+                        }
+                    }
+                }
+                .dropdown-manager {
+                    max-height: 0;
+                    overflow: hidden;
+                    padding-left: 10px;
+                    li{
+                        width: 100%;
+                        display: flex;
+                        padding: 0;
+                        font-size: 13.3px;
+                        a{
+                            display: block;
+                            width: 100%;
+                            padding: 8px 8px;
+                            i, span {
+                                color: #74829c;
+                            }
+                        }
+                    }
+                    transition: max-height 0.2s ease-out;
+                }
+            }
+            li.show {
+                .direction-wrapper {
+                    i:nth-child(2) {
+                        display: block;
+                    }
+                    i:nth-child(1) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .admin-main {
+        flex: 1;
+        background-color: rgb(240, 240, 245);
+        .main-cotainer {
+            padding: 0 32px;
+            .main-header {
+                margin: 25px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 50px;
+                h1 {
+                    margin: 0;
+                    font-size: 20px;
+                    font-weight: 500;
+                    position: relative;
+                    margin-bottom: 0.2rem;
+                }
+                ul {
+                    font-size: 1.3rem;
+                    list-style: none;
+                    display: flex;
+                    .breadcrumb-item {
+                        a{
+                            color: #76839a;
+                            text-decoration: none;
+                        }
+                    }
+                    .breadcrumb-item+.breadcrumb-item {
+                        padding-left: 0.5rem;
+                    }
+                    .breadcrumb-item.active {
+                        a {
+                            color: #6c5ffc;
+                        }
+                    }
+                }
+            }
+            .main-form {
+                .form-group {
+                    margin-bottom: 2rem;
+                    .custom-label-ip {
+                        font-size: 1.6rem;
+                        line-height: 3rem;
+                        padding: 10px;
+                        border-radius: 6px;
+                    }
+                    .custom-btn {
+                        padding: 10px 40px;
+                        margin: 24px 0 20px -7px;
+                    }
+                    .custom-close {
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        font-size: 2rem;
+                    }
+                    .custom-search {
+                        background-image: url(../images/searchicon.png);
+                        background-position: 10px 14px; /* Position the search icon */
+                        background-repeat: no-repeat; /* Do not repeat the icon image */
+                        padding-left: 40px;
+                    }
+                    .Result-infoWraper {
+                        display: flex;
+                        justify-content: space-between;
+                        max-width: 90%;
+                        p{
+                            margin: 0;
+                        }
+                    }
+                    .custom-tableWrapper {
+                        max-height: 200px;
+                        overflow: auto;
+                    }
+                    .customm-tableBody {
+                        cursor: pointer;
+                    }
+                    .custom-btn-addN {
+                        padding: 10px 40px;
+                        margin: 24px 0 11px -7px;
+                        align-self: flex-end;
+                    }
+                    .Choose-Ewrapper, .Add-Nwrapper {
+                        display: none;
+                    }
+                }
+                .form-group.choose-exist{
+                    .Choose-Ewrapper {
+                        display: block;
+                    }
+                }
+                .form-group.add-new {
+                    .Add-Nwrapper {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

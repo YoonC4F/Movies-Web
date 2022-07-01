@@ -625,3 +625,95 @@ function handldeSearchCart(element){
     handleMoneys()
     handleCountItem()
 }
+
+// admin.html=======
+function handleScroll(element, parentSelector) {
+    let parentElement = element.closest(parentSelector);
+    parentElement.classList.toggle('show')
+    var content = element.nextElementSibling;
+    if (content.style.maxHeight){
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    } 
+}
+
+function handleAdmin() {
+    let btnMovieManagement = $('.movie-side button')
+    let btnAccountManagement = $('.account-side button')
+    let radioChoices = $$('input[type="radio"]')
+
+    //handle sidebarScroll
+    btnMovieManagement.onclick = () => {
+        handleScroll(btnMovieManagement, '.movie-side')
+    }   
+    btnAccountManagement.onclick = () => {
+        handleScroll(btnAccountManagement, '.account-side')
+    }   
+
+    //handle director, actor
+    for (let radioChoice of radioChoices){
+        radioChoice.onclick = function(e) {
+            let parentElement = this.closest('.form-group')
+            parentElement.classList = `form-group row ${e.target.dataset.type}`
+        }
+    }
+
+}
+
+function handleFind(element, type){
+    let id = element.querySelector('th').innerHTML
+    let fullName = element.querySelectorAll('td')[0].innerHTML
+    let birth = element.querySelectorAll('td')[1].innerHTML
+    let country = element.querySelectorAll('td')[2].innerHTML
+
+    let resultShow = element.closest('.form-group').querySelector('.result-wrapper')
+    procesData(resultShow, type, id, fullName, birth, country)
+}
+
+function handleAdd(element, type){
+    let addParent = element.closest('.Add-Nwrapper')
+    let fullName = addParent.querySelectorAll('input')[0].value
+    let birth = addParent.querySelectorAll('input')[1].value
+    let country = addParent.querySelectorAll('input')[2].value
+
+    let resultShow = element.closest('.form-group').querySelector('.result-wrapper')
+    procesData(resultShow, type, 'None', fullName, birth, country)
+}
+
+function procesData(Pos, type, id, fullName, birth, country) {
+    if(checkDuplicate(Pos, id, fullName, birth, country)) return;
+    let data = `<div
+            class="alert alert-warning alert-dismissible fade show custom-label-ip mt-3 result-item"
+            role="alert">
+            <div class="Result-infoWraper">
+                <p>${id}</p>
+                <p>${fullName}</p>
+                <p>${birth}</p>
+                <p>${country}</p>
+            </div>
+            <button type="button" class="close custom-close" data-dismiss="alert"
+                aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>`
+    if(type == 'director')
+        Pos.innerHTML = data
+    else if(type == 'actor')
+        Pos.innerHTML += data
+}
+
+function checkDuplicate(Pos, id, fullName, birth, country){
+    let resultList = Pos.querySelectorAll('.result-item')
+    let arr = Array.from(resultList).map((cur, index) => {
+        let infoList = cur.querySelectorAll('.Result-infoWraper p')
+        let infoResult = ''
+        for(let infoItem of infoList){
+            infoResult += infoItem.innerHTML+'-'
+        }
+        return infoResult
+    })
+
+    if(arr.includes(id+'-'+fullName+'-'+birth+'-'+country+'-'))
+        return true;
+}
