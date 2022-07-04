@@ -664,33 +664,49 @@ function handleAdmin() {
 function handleFind(element, type){
     let id = element.querySelector('th').innerHTML
     let fullName = element.querySelectorAll('td')[0].innerHTML
-    let birth = element.querySelectorAll('td')[1].innerHTML
-    let country = element.querySelectorAll('td')[2].innerHTML
-
     let resultShow = element.closest('.form-group').querySelector('.result-wrapper')
-    procesData(resultShow, type, id, fullName, birth, country)
+
+    if(type !== 'genre'){
+        let birth = element.querySelectorAll('td')[1].innerHTML
+        let country = element.querySelectorAll('td')[2].innerHTML
+
+        procesData(resultShow, type, id, fullName, birth, country)
+    }
+    else
+        procesData(resultShow, type, id, fullName)
 }
 
 function handleAdd(element, type){
     let addParent = element.closest('.Add-Nwrapper')
     let fullName = addParent.querySelectorAll('input')[0].value
-    let birth = addParent.querySelectorAll('input')[1].value
-    let country = addParent.querySelectorAll('input')[2].value
-
     let resultShow = element.closest('.form-group').querySelector('.result-wrapper')
-    procesData(resultShow, type, 'None', fullName, birth, country)
+
+    if(type !== 'genre'){
+        let birth = addParent.querySelectorAll('input')[1].value
+        let country = addParent.querySelectorAll('input')[2].value
+    
+        procesData(resultShow, type, 'None', fullName, birth, country)
+    }
+    else
+        procesData(resultShow, type, 'None', fullName)
 }
 
 function procesData(Pos, type, id, fullName, birth, country) {
-    if(checkDuplicate(Pos, id, fullName, birth, country)) return;
+    if(checkDuplicate(Pos, type, id, fullName, birth, country)) return;
+    let dataTmp = ``
+    if(type !== 'genre'){
+        dataTmp = `<p>${id}</p>
+        <p>${fullName}</p>
+        <p>${birth}</p>
+        <p>${country}</p>`
+    }
+    else dataTmp = `<p>${id}</p>
+            <p>${fullName}</p>`
     let data = `<div
             class="alert alert-warning alert-dismissible fade show custom-label-ip mt-3 result-item"
             role="alert">
             <div class="Result-infoWraper">
-                <p>${id}</p>
-                <p>${fullName}</p>
-                <p>${birth}</p>
-                <p>${country}</p>
+                ${dataTmp}
             </div>
             <button type="button" class="close custom-close" data-dismiss="alert"
                 aria-label="Close">
@@ -701,9 +717,11 @@ function procesData(Pos, type, id, fullName, birth, country) {
         Pos.innerHTML = data
     else if(type == 'actor')
         Pos.innerHTML += data
+    else if(type == 'genre')
+        Pos.innerHTML += data
 }
 
-function checkDuplicate(Pos, id, fullName, birth, country){
+function checkDuplicate(Pos, type, id, fullName, birth, country){
     let resultList = Pos.querySelectorAll('.result-item')
     let arr = Array.from(resultList).map((cur, index) => {
         let infoList = cur.querySelectorAll('.Result-infoWraper p')
@@ -714,6 +732,58 @@ function checkDuplicate(Pos, id, fullName, birth, country){
         return infoResult
     })
 
-    if(arr.includes(id+'-'+fullName+'-'+birth+'-'+country+'-'))
+    if(type !== 'genre'){
+        if(arr.includes(id+'-'+fullName+'-'+birth+'-'+country+'-'))
+            return true;
+    }
+    else {
+        if(arr.includes(id+'-'+fullName+'-'))
         return true;
+    }
+
+    return false;
+}
+
+function getData(element){
+    let result=''
+    for(let i=0; i<element.length; i++){
+        result += element[i].innerHTML
+        result += i!==element.length-1 ? ':' : ''
+    }
+    return result
+}
+
+function handleSubmitAddMovie() {
+    let btnSubmit = $('.col-sm-10 > button')
+    
+    btnSubmit.onclick = () => {
+        let movieName = $('input[name="name"]').value
+        let realseYear = $('input[name="RealseYear"]').value
+        let length = $('input[name="Length"]').value
+        let country = $('input[name="Country"]').value
+        let rating = $('input[name="Rating"]').value
+        let price = $('input[name="Price"]').value
+        let src = $('input[name="Src"]').value
+        let description = $('input[name="Description"]').value
+
+        let directorContainerdata = $$('#director-data .Result-infoWraper p')
+        let directorData = getData(directorContainerdata)
+
+        let actorContainedataBox = $$('#actor-data .Result-infoWraper')
+        let actorData = []
+        for(let actorContainerData of actorContainedataBox){
+            actorData.push(getData(actorContainerData.querySelectorAll('p')))
+        }
+
+        let genreContainedataBox = $$('#genre-data .Result-infoWraper')
+        let genreData = []
+        for(let genreContainerData of genreContainedataBox){
+            genreData.push(getData(genreContainerData.querySelectorAll('p')))
+        }
+
+        let parameters = {movieName, realseYear, length, country, rating, price,
+             src, description, directorData, actorData, genreData}
+
+        console.log(parameters) 
+    }
 }
