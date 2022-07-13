@@ -626,6 +626,55 @@ function handldeSearchCart(element){
     handleCountItem()
 }
 
+function handleAfterCheckout(checkoutElements, MessType){
+    let cardMess = $('.card-mess')
+    let data = ''
+    if(MessType == 'Success'){
+        for(let checkoutElement of checkoutElements)
+            handleDelete(checkoutElement)
+        data = `<strong>Success!</strong> Buy successfully!.`
+    }
+    else if(MessType == 'Failure'){
+        data = `<strong>Not enough money!</strong> You can't buy these films.`
+    }
+    else if (checkoutElements.length == 0) {
+        data = `<strong>Error!</strong> You can't buy without any items.`
+    }
+
+    cardMess.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+            ${data}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>`
+}
+
+function handleCheckout() {
+    let checkoutBtn = $('#checkout-btn')
+    let closeBtn = checkoutBtn.parentElement.querySelector('.btn-secondary')
+    
+    checkoutBtn.onclick = () => {
+        let checkItems = $$('input[name="item-index"]:checked')
+        let moneyPos = $('.shopping-card-total span')
+        let idList = []
+        for(let checkItem of checkItems){
+            idList.push(checkItem.dataset.id)
+        }
+        
+        let parameters = {idList: idList.join(','), money: moneyPos.innerHTML}
+        // console.log(parameters)
+
+        if(checkItems.length == 0)
+            handleAfterCheckout(checkItems)
+        else {
+            //call api processData
+            handleAfterCheckout(checkItems, 'Failure')
+        }
+
+        closeBtn.click()
+    }
+}
+
 // admin.html=======
 function handleScroll(element, parentSelector) {
     let parentElement = element.closest(parentSelector);

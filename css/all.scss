@@ -13,12 +13,12 @@ html {
 
 // ===============index.html===================
 #page-loading {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    display: none;
     p,i {
         font-size: 2rem;
     }
@@ -436,10 +436,15 @@ html {
             color: #151515;
             text-decoration: none;
             font-size: 1.8rem;
-            line-height: 1em;
+            line-height: 2rem;
+            height: 4.1rem;
             padding-top: 20px;
             transition: all 0.3s ease;
             font-weight: 700;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
         }
         h6 a:hover {
             color: #d81a24;
@@ -1389,14 +1394,14 @@ html {
                     transform: translate(-50%, calc(-50% - 36px)) scale(1.5);
                 }
             }
-            .modal-dialog {
-                margin-top: 112px;
-            }
             iframe {
                 height: 650px;
                 width: 1050px;
                 position: relative;
                 left: -114px;
+            }
+            .modal-dialog {
+                margin-top: 112px;
             }
             .modal-header {
                 h5 {
@@ -1795,6 +1800,15 @@ html {
         border-bottom: 1px solid rgba(0,0,0,.1);
     }
     .shopping-card-list {
+        .alert {
+            font-size: 1.8rem;
+            border-radius: 10px;
+            padding: 14px 10px;
+            button {
+                font-size: 2rem;
+                top: 7px;
+            }
+        }
         margin-bottom: 32px;
         input[type="checkbox"] {
             position: relative;
@@ -1957,9 +1971,12 @@ html {
         }
     }
     .btn-nav {
+        display: flex;
+        align-items: center;
         margin: 10px 0 60px;
-        text-align: right;
-        a {
+        justify-content: flex-end;
+        gap: 10px;
+        a, button.checkout {
             display: inline-block;
             text-decoration: none;
             font-size: 1.6rem;
@@ -1969,12 +1986,35 @@ html {
             font-weight: 500;
             border-radius: 5px;
         }
-        a:nth-of-type(2) {
+        button.checkout {
+            border: none;
+            cursor: pointer;
             color: #fff;
             background-color: #1266f1;
         }
-        a:hover {
+        a:hover, .checkout:hover {
             opacity: 0.8;
+        }
+        .modal-dialog {
+            margin-top: 112px;
+        }
+        .modal-header {
+            h5 {
+                font-size: 2rem;
+            }
+            span {
+                font-size: 2.4rem;
+            }
+        }
+        .modal-body {
+            span {
+                font-size: 1.8rem;
+            }
+        }
+        .modal-footer {
+            button {
+                padding: 10px 40px;
+            }
         }
     }
 }
@@ -2223,6 +2263,50 @@ html {
                                 font-size: 1.6rem;
                                 line-height: 3rem;
                                 padding: 6px 24px;
+                            }
+                        }
+                    }
+                }
+            }
+            .general-statistic {
+                .GS__item-general {
+                    padding: 25px;
+                    display: flex;
+                    min-height: 100px;
+                    background-color: white;
+                    border-radius: 7px;
+                    box-shadow: 0 4px 25px 0 rgba(168, 180, 208, 0.1);
+                    justify-content: space-between;
+                    align-items: center;
+                    h4 {
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                    }
+                    p {
+                        font-size: 2.8rem;
+                        font-weight: 500;
+                    }
+                    span {
+                        font-size: 3.8rem;
+                    }
+                }
+                .detail-statistic {
+                    margin-top: -8px;
+                    .row {
+                        margin-bottom: 20px;
+                        .col-12 div{
+                            background-color: white;
+                            border-radius: 7px;
+                            box-shadow: 0 4px 25px 0 rgba(168, 180, 208, 0.1);
+                            h4 {
+                                font-size: 1.6rem;
+                                font-weight: 500;
+                                padding: 20px 24px;
+                                margin-bottom: 0;
+                                border-bottom: 1px solid #e9edf4;
+                            }
+                            canvas {
+                                padding: 25px;
                             }
                         }
                     }
