@@ -124,9 +124,28 @@ html {
                         }
                     }
                     .MyCard-content {
-                        max-height: 68vh;
-                        overflow-y: auto;
+                        max-height: 415px;
+                        overflow-y: overlay;
                         overscroll-behavior: contain;
+                        &::-webkit-scrollbar {
+                            width: 10px;
+                          }
+                          
+                        /* Track */
+                        &::-webkit-scrollbar-track {
+                        background: #f1f1f1;
+                        }
+                          
+                        /* Handle */
+                        &::-webkit-scrollbar-thumb {
+                        background: #888;
+                        }
+                          
+                        /* Handle on hover */
+                        &::-webkit-scrollbar-thumb:hover {
+                        background: #555;
+                        }
+
                         .MyCard-content-item {
                             border-radius: 10px;
                             display: flex;
@@ -202,6 +221,14 @@ html {
                         }
                         .MyCard-content-item:hover {
                             background-color: #443f3f;
+                        }
+
+                        span.no-cart{
+                            display: block;
+                            font-size: 1.6rem;
+                            text-align: center;
+                            color: #b28989;
+                            padding: 8px; 
                         }
                     }
                     
@@ -2312,8 +2339,153 @@ html {
                     }
                 }
             }
+            .main-mess {
+                display: flex;
+                .mess-left {
+                    width: 330px;
+                    border-right: 2px solid #a29f9f;
+                    .user-item {
+                        display: flex;
+                    }
+                }
+                .mess-right {
+                    flex: 1;
+                    min-height: 790px;
+                }
+            }
         }
     }
 }
 
-
+// mess===============
+.page-controll-mess {
+    cursor: pointer;
+    position: fixed;
+    right: 40px;
+    bottom: 110px;
+    font-size: 62px;
+    color: #6d6555;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+#page-mess {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 124px;
+    background-color: #242526;
+    color: white;
+    width: 328px;
+    height: 455px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    .mess-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1),0 -1px rgba(255, 255, 255, 0.05) inset,0 2px 1px -1px rgba(255, 255, 255, 0.05) inset;
+        .account-mess {
+            display: flex;
+            align-items: center;
+            img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+            }
+            h4 {
+                font-size: 1.4rem;
+                font-weight: 600px;
+                margin-bottom: 0;
+                margin-left: 6px;
+            }
+        }
+        .control-mess {
+            display: flex;
+            align-items: center;
+            span {
+                font-size: 18px;
+                color: #ccc;
+                cursor: pointer;
+                padding: 2px 6px;
+                border-radius: 6px;
+                &:hover {
+                    background-color: #424549;
+                }
+            }
+        }
+    }
+    .mess-content {
+        .mess-item {
+            margin: 4px 0;
+            display: flex;
+            align-items: flex-end;
+            img {
+                height: 28px;
+                width: 28px;
+                border-radius: 50%;
+                margin: 0 8px 0 6px;
+            }
+            p {
+                font-size: 1.5rem;
+                margin-bottom: 0;
+                background-color: #3e4042;
+                max-width: 200px;
+                padding: 6px 10px;
+                border-radius: 4px;
+            }
+            .mess-react {
+                font-size: 16px;
+                align-self: center;
+                margin-left: 8px;
+                color: #9d795f;
+                cursor: pointer;
+            }
+        }
+    }
+    .mess-send {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+        padding: 12px 8px;
+        align-items: center;
+        color: #666768;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1),0 -1px rgba(255, 255, 255, 0.05) inset,0 2px 1px -1px rgba(255, 255, 255, 0.05) inset;
+        .import-file {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .text-input {
+            margin: 8px;
+            flex: 1;
+            padding: 0 10px;
+            background-color: #3a3b3c;
+            height: 100%;
+            border-radius: 14px;
+            input {
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+        .send-pos {
+            display: flex;
+            cursor: pointer;
+            svg {
+                fill: #666768;
+            }
+        }
+    }
+}
+#page-mess.display-mess {
+    display: block;
+}

@@ -189,9 +189,28 @@ html {
 }
 
 #page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content {
-  max-height: 68vh;
-  overflow-y: auto;
+  max-height: 415px;
+  overflow-y: overlay;
   overscroll-behavior: contain;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 #page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item {
@@ -283,6 +302,14 @@ html {
 
 #page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content .MyCard-content-item:hover {
   background-color: #443f3f;
+}
+
+#page-heading nav .connected-to-web .shopping-card-wrapper .demo-card-film .MyCard-content span.no-cart {
+  display: block;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #b28989;
+  padding: 8px;
 }
 
 #page-heading nav .connected-to-web .shopping-card-wrapper.onclick .demo-card-film {
@@ -2884,5 +2911,209 @@ html {
 
 #admin-wrapper .admin-main .main-cotainer .general-statistic .detail-statistic .row .col-12 div canvas {
   padding: 25px;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-mess {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-mess .mess-left {
+  width: 330px;
+  border-right: 2px solid #a29f9f;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-mess .mess-left .user-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#admin-wrapper .admin-main .main-cotainer .main-mess .mess-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-height: 790px;
+}
+
+.page-controll-mess {
+  cursor: pointer;
+  position: fixed;
+  right: 40px;
+  bottom: 110px;
+  font-size: 62px;
+  color: #6d6555;
+}
+
+.page-controll-mess:hover {
+  opacity: 0.8;
+}
+
+#page-mess {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 124px;
+  background-color: #242526;
+  color: white;
+  width: 328px;
+  height: 455px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#page-mess .mess-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 -1px rgba(255, 255, 255, 0.05) inset, 0 2px 1px -1px rgba(255, 255, 255, 0.05) inset;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 -1px rgba(255, 255, 255, 0.05) inset, 0 2px 1px -1px rgba(255, 255, 255, 0.05) inset;
+}
+
+#page-mess .mess-header .account-mess {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#page-mess .mess-header .account-mess img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+#page-mess .mess-header .account-mess h4 {
+  font-size: 1.4rem;
+  font-weight: 600px;
+  margin-bottom: 0;
+  margin-left: 6px;
+}
+
+#page-mess .mess-header .control-mess {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#page-mess .mess-header .control-mess span {
+  font-size: 18px;
+  color: #ccc;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+#page-mess .mess-header .control-mess span:hover {
+  background-color: #424549;
+}
+
+#page-mess .mess-content .mess-item {
+  margin: 4px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#page-mess .mess-content .mess-item img {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  margin: 0 8px 0 6px;
+}
+
+#page-mess .mess-content .mess-item p {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  background-color: #3e4042;
+  max-width: 200px;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+#page-mess .mess-content .mess-item .mess-react {
+  font-size: 16px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-left: 8px;
+  color: #9d795f;
+  cursor: pointer;
+}
+
+#page-mess .mess-send {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 12px 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #666768;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 -1px rgba(255, 255, 255, 0.05) inset, 0 2px 1px -1px rgba(255, 255, 255, 0.05) inset;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 -1px rgba(255, 255, 255, 0.05) inset, 0 2px 1px -1px rgba(255, 255, 255, 0.05) inset;
+}
+
+#page-mess .mess-send .import-file {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#page-mess .mess-send .text-input {
+  margin: 8px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 10px;
+  background-color: #3a3b3c;
+  height: 100%;
+  border-radius: 14px;
+}
+
+#page-mess .mess-send .text-input input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+#page-mess .mess-send .send-pos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+#page-mess .mess-send .send-pos svg {
+  fill: #666768;
+}
+
+#page-mess.display-mess {
+  display: block;
 }
 /*# sourceMappingURL=all.css.map */

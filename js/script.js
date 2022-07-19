@@ -357,6 +357,19 @@ function handleIndex() {
             T_container.style.transform = `translateX(-${(T_dotItem.dataset.index - 1) * 2 * T_oneReviewer}px)`;
         })
     }
+
+    //messs================
+    let messIcon = $('.page-controll-mess')
+    let pageMess = $('#page-mess')
+    let controllClose = $('.control-mess')
+
+    controllClose.onclick = function () {
+        pageMess.classList.toggle('display-mess')
+    }
+
+    messIcon.onclick = function () {
+        pageMess.classList.toggle('display-mess')
+    }
 }
 
 //movies.html
@@ -426,6 +439,37 @@ function handleMovies() {
             }
             handleClickPa(currentIndex)
         })
+    }
+}
+
+function handleMovieAddToCard(){
+    let targetAdd = $('.MyCard-content')
+    let addToCartBtns = $$('.RC-search-content .col-12 span[data-id]')
+
+    console.log(document.cookie)
+
+    for(let cartBtn of addToCartBtns){
+        cartBtn.onclick = function(){
+            let parentElement = card.closest('.col-12')
+            let src = parentElement.querySelector('img').src
+            let name = parentElement.querySelector('.movie-description a').innerHTML
+            let id = parentElement.querySelector('.movie-description span').dataset.id
+
+            targetAdd.innerHTML += `
+                <div data-id="${id}" data-src="${src}"class="MyCard-content-item">
+                    <a href="#">
+                        <img src="${src}">
+                    </a>
+                    <div class="card-film-info">
+                        <h3><a href="#">${name}</a></h3>
+                        <p class="card-last-access">Last access was 13 day ago</p>
+                        <div class="card-checkpay">
+                            <a href="#">Pay Now$$</a>
+                        </div>
+                    </div>
+                </div>
+            `
+        }
     }
 }
 
